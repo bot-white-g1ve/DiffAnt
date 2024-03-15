@@ -21,7 +21,7 @@ import os
 import pdb
 import numpy as np
 
-prefix = 'Swin-T50RealExp2nd'
+prefix = 'RDV-T45AnticipationTry'
 
 program_file = ['main.py', 'test.py'][0]
 
@@ -44,8 +44,8 @@ for g_id, group in enumerate(configs_groups):
         '#!/bin/bash',
          
         '#PBS -q gpuvolta',
-        '#PBS -P jp09',
-        '#PBS -l walltime=8:00:00',
+        '#PBS -P zg12',
+        '#PBS -l walltime=10:00:00',
         '#PBS -l mem=50GB',
         '#PBS -l ncpus=12',
         '#PBS -l ngpus=1',

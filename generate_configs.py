@@ -61,6 +61,8 @@ test_videos_challenge = {
 
 default_params = {
 
+   "ant_range": 0,
+
    "naming": "default",
    "root_data_dir":"/g/data/zg12/dataset",
    "result_dir": "/g/data/zg12/result",
@@ -119,7 +121,7 @@ default_params = {
    "batch_size":1,
    "learning_rate":0.00005,
    "weight_decay":1e-5,
-   "num_epochs":1201,
+   "num_epochs":1601,
    "log_freq":100,
    "class_weighting":[],
    "set_sampling_seed":True,
@@ -136,20 +138,12 @@ default_params = {
    },
 }
 
-
 default_params_T50 = copy.deepcopy(default_params)
 default_params_T50['dataset_name'] = 'CholecT50'
 
 default_params_T45 = copy.deepcopy(default_params)
 default_params_T45['dataset_name'] = 'CholecT45'
 default_params_T45['weight_decay'] = 5e-5
-
-default_params_challenge = copy.deepcopy(default_params)
-default_params_challenge['dataset_name'] = 'Challenge'
-default_params_challenge['evaluation_protocol'] = 'Challenge'
-
-# params['log_APs'] = ["i", "v", "t", "iv", "it", "ivt"]
-# params['evaluation_protocol'] = ["Non-Challenge", "Challenge"][0]
 
 ################
 
@@ -203,7 +197,7 @@ def generate_cv_config(params_template, default_feature_prefix, options, naming_
                     params['feature_subdir'] = f'{default_feature_prefix}-k{split_id}'
                     params['encoder_params']['input_dim'] = feature_dim_dict[default_feature_prefix]
 
-                    params['num_epochs'] = 1201
+                    params['num_epochs'] = 1601
                     params['log_train_results'] = False # to be turned on later
                     
                     ################
@@ -268,193 +262,76 @@ def generate_cv_config(params_template, default_feature_prefix, options, naming_
                         json.dump(params, outfile, ensure_ascii=False)
 
 
+
+
 ################# CV Settings ####################
 
-options = {
-    "baseline": ['R1', 'R2', 'R3'],
-    "target_components": [['ivt'], ['ivt', 'i', 'v', 't', 'iv', 'it']],
-    "class_weighting": [['ivt', 'i', 'v', 't'], ['i', 'v', 't'], ['ivt']],
-    "diffusion_cross_att_decoder": [True],
-    "causal": [False],
-}
-
-generate_cv_config(
-  params_template=default_params_T50, 
-  default_feature_prefix='feature-RDV-2500', 
-  options=options, 
-  naming_prefix='RDV-T50RealExp2nd', 
-  repeat_num=3, 
-  split_num=5, 
-  pretrain_prefix=None, 
-  pretrain_suffix=None, 
-  pretrain_epochs=None
-)
-
-options = {
-    "baseline": ['R1', 'R2', 'R3'],
-    "causal": [False],
-}
-
-generate_cv_config(
-  params_template=default_params_T45, 
-  default_feature_prefix='feature-RDV-4x4', # 3x3 is lightly better
-  options=options, 
-  naming_prefix='RDV-T45RealExp2nd', 
-  repeat_num=3, 
-  split_num=5, 
-  pretrain_prefix=None, 
-  pretrain_suffix=None, 
-  pretrain_epochs=None
-)
-
-
-options = {
-    "baseline": ['R1', 'R2', 'R3'],
-    "causal": [False],
-}
-
-generate_cv_config(
-  params_template=default_params_T50, 
-  default_feature_prefix='feature-SelfDistillSwin', # feature not ready yet!
-  options=options, 
-  naming_prefix='Swin-T50RealExp2nd', 
-  repeat_num=3, 
-  split_num=5, 
-  pretrain_prefix=None, 
-  pretrain_suffix=None, 
-  pretrain_epochs=None
-)
-
-options = {
-    "baseline": ['R1', 'R2', 'R3'],
-    "causal": [False],
-}
-
-generate_cv_config(
-  params_template=default_params_T45, 
-  default_feature_prefix='feature-SelfDistillSwin',
-  options=options, 
-  naming_prefix='Swin-T45RealExp2nd', 
-  repeat_num=3, 
-  split_num=5, 
-  pretrain_prefix=None, 
-  pretrain_suffix=None, 
-  pretrain_epochs=None
-)
-
-################# Challenge Settings ####################
-
-options = {
-    "weight_decay": [1e-6, 1e-5, 2e-5, 5e-5, 1e-4],
-    "causal": [False],
-}
-
-generate_cv_config(
-  params_template=default_params_challenge, 
-  default_feature_prefix='feature-RDV-2500',
-  options=options, 
-  naming_prefix='RDV-ChallengeInitTry', 
-  repeat_num=3, 
-  split_num=1, 
-  pretrain_prefix=None, 
-  pretrain_suffix=None, 
-  pretrain_epochs=None
-)
-
-# ############### CV Settings: Inference Only ####################
-
 # options = {
-#     "diffusion_sampling_timesteps": [1, 2, 4, 8, 16, 32, 64, 128],
-#     "diffusion_guidance_scale": [0.00, 0.25, 0.50, 0.75, 1.00],
+#     "baseline": ['R1'],
+#     "ant_range": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25, 30, 40, 50, 75, 100, 200]
 # }
 
 # generate_cv_config(
 #   params_template=default_params_T50, 
 #   default_feature_prefix='feature-RDV-2500', 
 #   options=options, 
-#   naming_prefix='RDV-T50RealExp2ndInfer', 
+#   naming_prefix='RDV-T50AnticipationTry', 
 #   repeat_num=3, 
 #   split_num=5, 
-#   pretrain_prefix='RDV-T50RealExp2nd',      # To be confirmed!!!!!!!!!
-#   pretrain_suffix='-baseline-R2',           # To be confirmed!!!!!!!!!
-#   pretrain_epochs=[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100] # when summarizing results, need to fix the same epochs (500)
+#   pretrain_prefix=None, 
+#   pretrain_suffix=None, 
+#   pretrain_epochs=None
 # )
 
+options = {
+    "baseline": ['R1'],
+    "ant_range": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25, 30, 40, 50, 75, 100, 200]
+}
+
+generate_cv_config(
+  params_template=default_params_T45, 
+  default_feature_prefix='feature-RDV-4x4',
+  options=options, 
+  naming_prefix='RDV-T45AnticipationTry', 
+  repeat_num=3, 
+  split_num=5, 
+  pretrain_prefix=None, 
+  pretrain_suffix=None, 
+  pretrain_epochs=None
+)
 
 
+# options = {
+#     "baseline": ['R1'],
+#     "ant_range": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25, 30, 40, 50, 75, 100, 200]
+# }
 
+# generate_cv_config(
+#   params_template=default_params_T50, 
+#   default_feature_prefix='feature-SelfDistillSwin', # feature not ready yet!
+#   options=options, 
+#   naming_prefix='Swin-T50AnticipationTry', 
+#   repeat_num=3, 
+#   split_num=5, 
+#   pretrain_prefix=None, 
+#   pretrain_suffix=None, 
+#   pretrain_epochs=None
+# )
 
+# options = {
+#     "baseline": ['R1'],
+#     "ant_range": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25, 30, 40, 50, 75, 100, 200]
+# }
 
-
-
-#################### GD
-
-# # encoder_num_f_maps_opt = [32, 64, 128] # 64
-# # decoder_num_f_maps_opt = [64, 128, 256] # 256
-# # weight_decay_opt = [1e-5, 2e-5, 5e-5] # any, 5e-5 is better, try weight_decay_again!
-# conclusion: 64, 256, 1e-5, no need to change any more
-
-# encoder_feature_layer_indices_opt = [[1,2,3], [2,3], [3], [2]]
-# decoder_kernel_size_opt = [7, 9, 11]
-# decoder_time_emb_dim_opt = [128, 256, 512]
-
-# # to do
-# # encoder_num_layers
-# # # decoder_num_layers_opt = [2, 4]
-# # encoder_kernel_size
-
-# naming_prefix = 'RDV-T45GD2nd'
-
-# repeat_num = 3
-# split_num = 5
-
-# for i1, encoder_num_f_maps in enumerate(encoder_num_f_maps_opt):
-#     for i2, decoder_num_f_maps in enumerate(decoder_num_f_maps_opt):
-#         for i3, weight_decay in enumerate(weight_decay_opt):
-
-#             for repeat_id in range(repeat_num):
-#                 for split_id in range(1, split_num+1):
-
-#                     params = copy.deepcopy(default_params)
-#                     params['encoder_params']['num_f_maps'] = encoder_num_f_maps
-#                     params['decoder_params']['num_f_maps'] = decoder_num_f_maps
-#                     params['weight_decay'] = weight_decay
-
-#                     params['naming'] = f'{naming_prefix}-S{split_id}-{repeat_id}-{i1}-{i2}-{i3}'
-#                     params['root_data_dir'] = '/g/data/zg12/dataset'
-#                     params['result_dir'] = '/g/data/zg12/result'
-
-#                     ################
-                    
-#                     if params['dataset_name'] == 'CholecT45':
-#                         params['feature_subdir'] = f'feature-RDV-CholecT45-2500-k{split_id}'
-#                         params['encoder_params']['input_dim'] = 2500 # To improve features later
-#                         params['train_video_list'] = train_videos_T45_cv[f'k{split_id}']
-#                         params['test_video_list'] = test_videos_T45_cv[f'k{split_id}']
-#                         params['val_video_list'] = []
-                    
-#                     if params['dataset_name'] == 'CholecT50':
-#                         params['feature_subdir'] = f'feature-RDV-CholecT50-2500-k{split_id}'
-#                         params['encoder_params']['input_dim'] = 2500 # To improve features later
-#                         params['train_video_list'] = train_videos_T50_cv[f'k{split_id}']
-#                         params['test_video_list'] = test_videos_T50_cv[f'k{split_id}']
-#                         params['val_video_list'] = []
-                    
-#                     ################
-
-#                     params['log_APs'] = ["i", "v", "t", "iv", "it", "ivt"]
-#                     params['evaluation_protocol'] = ["Non-Challenge", "Challenge"][0]
-
-#                     params['num_epochs'] = 2001
-#                     params['log_train_results'] = False
-                    
-#                     ################
-
-#                     if not os.path.exists('configs'):
-#                         os.makedirs('configs')
-                    
-#                     file_name = os.path.join('configs', f'{params["naming"]}.json')
-
-#                     with open(file_name, 'w') as outfile:
-#                         json.dump(params, outfile, ensure_ascii=False)
+# generate_cv_config(
+#   params_template=default_params_T45, 
+#   default_feature_prefix='feature-SelfDistillSwin',
+#   options=options, 
+#   naming_prefix='Swin-T45AnticipationTry', 
+#   repeat_num=3, 
+#   split_num=5, 
+#   pretrain_prefix=None, 
+#   pretrain_suffix=None, 
+#   pretrain_epochs=None
+# )
 

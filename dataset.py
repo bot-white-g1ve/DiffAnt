@@ -10,7 +10,7 @@ from utils import convert_label_format, split_tensor_ivt
 from scipy.ndimage import gaussian_filter1d
 
 def get_data_dict(root_data_dir, dataset_name, feature_subdir, mapping_file,
-    target_components, video_list, sample_rate=4, temporal_aug=True):
+    target_components, video_list, sample_rate=4, temporal_aug=True, ant_range=0):
 
     feature_dir = os.path.join(root_data_dir, dataset_name, feature_subdir)
 
@@ -40,9 +40,9 @@ def get_data_dict(root_data_dir, dataset_name, feature_subdir, mapping_file,
 
         if len(feature.shape) == 3:
             feature = np.swapaxes(feature, 0, 1)  
-        elif len(feature.shape) == 2:
-            feature = np.swapaxes(feature, 0, 1)
-            feature = np.expand_dims(feature, 0)
+        elif len(feature.shape) == 2: # F,T
+            feature = np.swapaxes(feature, 0, 1) # T,F
+            feature = np.expand_dims(feature, 0) # 1,T,F
         else:
             raise Exception('Invalid Feature.')
                     
@@ -80,7 +80,13 @@ def get_data_dict(root_data_dir, dataset_name, feature_subdir, mapping_file,
             tensor = torch.tensor(tensor_list)
             event_seq_ivt = tensor.float()
 
-        assert(feature.shape[1] == event_seq_ivt.shape[0])
+        assert(feature.shape[1] == event_seq_ivt.shape[0]) # 1,T,F / T,C
+
+        if ant_range > 0:
+            feature = feature[:,:-ant_range,:]
+            event_seq_ivt = event_seq_ivt[ant_range:,:]
+
+        assert(feature.shape[1] == event_seq_ivt.shape[0]) # 1,T,F / T,C
 
         event_seq_i, event_seq_v, event_seq_t, event_seq_iv, event_seq_it = split_tensor_ivt(event_seq_ivt, mapping_file)
 

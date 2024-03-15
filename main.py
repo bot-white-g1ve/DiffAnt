@@ -412,6 +412,7 @@ if __name__ == '__main__':
         video_list=train_video_list, 
         sample_rate=sample_rate, 
         temporal_aug=temporal_aug,
+        ant_range=ant_range,
     )
 
     train_train_dataset = VideoFeatureDataset(train_data_dict, target_components, mode='train')
@@ -427,6 +428,7 @@ if __name__ == '__main__':
             video_list=test_video_list, 
             sample_rate=sample_rate, 
             temporal_aug=temporal_aug,
+            ant_range=ant_range,
         )
         test_test_dataset = VideoFeatureDataset(test_data_dict, target_components, mode='test')
     else:
@@ -442,6 +444,7 @@ if __name__ == '__main__':
             video_list=val_video_list, 
             sample_rate=sample_rate, 
             temporal_aug=temporal_aug,
+            ant_range=ant_range,
         )
         val_test_dataset = VideoFeatureDataset(val_data_dict, target_components, mode='test')
     else:
