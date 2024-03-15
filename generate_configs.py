@@ -1,0 +1,460 @@
+
+import os
+import json
+import copy
+
+splits_T45_cv = {"k1": ["VID79","VID02","VID51","VID06","VID25","VID14","VID66","VID23","VID50"],
+                  "k2": ["VID80","VID32","VID05","VID15","VID40","VID47","VID26","VID48","VID70"],
+                  "k3": ["VID31","VID57","VID36","VID18","VID52","VID68","VID10","VID08","VID73"],
+                  "k4": ["VID42","VID29","VID60","VID27","VID65","VID75","VID22","VID49","VID12"],
+                  "k5": ["VID78","VID43","VID62","VID35","VID74","VID01","VID56","VID04","VID13"]}
+
+
+splits_T50_cv = {"k1": ["VID79","VID02","VID51","VID06","VID25","VID14","VID66","VID23","VID50","VID111"],
+                  "k2": ["VID80","VID32","VID05","VID15","VID40","VID47","VID26","VID48","VID70","VID96"],
+                  "k3": ["VID31","VID57","VID36","VID18","VID52","VID68","VID10","VID08","VID73","VID103"],
+                  "k4": ["VID42","VID29","VID60","VID27","VID65","VID75","VID22","VID49","VID12","VID110"],
+                  "k5": ["VID78","VID43","VID62","VID35","VID74","VID01","VID56","VID04","VID13","VID92"]}
+
+train_videos_T45_cv = {
+    'k1': splits_T45_cv['k2'] + splits_T45_cv['k3'] + splits_T45_cv['k4'] + splits_T45_cv['k5'],
+    'k2': splits_T45_cv['k3'] + splits_T45_cv['k4'] + splits_T45_cv['k5'] + splits_T45_cv['k1'],
+    'k3': splits_T45_cv['k4'] + splits_T45_cv['k5'] + splits_T45_cv['k1'] + splits_T45_cv['k2'],
+    'k4': splits_T45_cv['k5'] + splits_T45_cv['k1'] + splits_T45_cv['k2'] + splits_T45_cv['k3'],
+    'k5': splits_T45_cv['k1'] + splits_T45_cv['k2'] + splits_T45_cv['k3'] + splits_T45_cv['k4'],
+}
+
+test_videos_T45_cv = {
+    'k1': splits_T45_cv['k1'],
+    'k2': splits_T45_cv['k2'],
+    'k3': splits_T45_cv['k3'],
+    'k4': splits_T45_cv['k4'],
+    'k5': splits_T45_cv['k5'],
+}
+
+train_videos_T50_cv = {
+    'k1': splits_T50_cv['k2'] + splits_T50_cv['k3'] + splits_T50_cv['k4'] + splits_T50_cv['k5'],
+    'k2': splits_T50_cv['k3'] + splits_T50_cv['k4'] + splits_T50_cv['k5'] + splits_T50_cv['k1'],
+    'k3': splits_T50_cv['k4'] + splits_T50_cv['k5'] + splits_T50_cv['k1'] + splits_T50_cv['k2'],
+    'k4': splits_T50_cv['k5'] + splits_T50_cv['k1'] + splits_T50_cv['k2'] + splits_T50_cv['k3'],
+    'k5': splits_T50_cv['k1'] + splits_T50_cv['k2'] + splits_T50_cv['k3'] + splits_T50_cv['k4'],
+}
+
+test_videos_T50_cv = {
+    'k1': splits_T50_cv['k1'],
+    'k2': splits_T50_cv['k2'],
+    'k3': splits_T50_cv['k3'],
+    'k4': splits_T50_cv['k4'],
+    'k5': splits_T50_cv['k5'],
+}
+
+train_videos_challenge = {
+  'k1': ['VID01', 'VID10', 'VID22', 'VID29', 'VID42', 'VID50', 'VID60', 'VID73', 'VID05', 'VID02', 'VID12', 'VID23', 'VID31', 
+  'VID43', 'VID51', 'VID62', 'VID75', 'VID18', 'VID04', 'VID13', 'VID25', 'VID32', 'VID47', 'VID52', 'VID66', 'VID78', 'VID36', 
+  'VID06', 'VID14', 'VID26', 'VID35', 'VID48', 'VID56', 'VID68', 'VID79', 'VID65', 'VID08', 'VID15', 'VID27', 'VID40', 'VID49', 
+  'VID57', 'VID70', 'VID80', 'VID74'],
+}
+
+test_videos_challenge = {
+  'k1': ['VID92', 'VID96', 'VID103', 'VID110', 'VID111'],
+}
+
+default_params = {
+
+   "naming": "default",
+   "root_data_dir":"/g/data/zg12/dataset",
+   "result_dir": "/g/data/zg12/result",
+   "dataset_name":"",
+   "feature_subdir": "",
+   "train_video_list": None,
+   "test_video_list": None,
+   "val_video_list": None,
+
+   "target_components": ['ivt', 'i', 'v', 't'],
+
+   "encoder_params":{
+      "use_instance_norm":False,
+      "num_layers":4,
+      "num_f_maps":64,
+      "input_dim":2500,
+      "kernel_size":5,
+      "normal_dropout_rate":0.1,
+      "channel_dropout_rate":0.5,
+      "temporal_dropout_rate":0.5,
+      "feature_layer_indices":[
+         1, 2, 3
+      ]
+   },
+   "decoder_params":{
+      "num_layers":2,  
+      "num_f_maps":256, 
+      "time_emb_dim":512,
+      "kernel_size":11,
+      "dropout_rate":0.2
+   },
+   "diffusion_params":{
+      "timesteps":1000,
+      "sampling_timesteps":8,
+      "ddim_sampling_eta":1.0,
+      "snr_scale":1.0,
+      "cond_types":[
+         "full", "full", "zero"
+      ],
+      "xt_mask_groups":None,   #useless
+      "xt_mask_reverse":False, #useless
+      "guidance_scale":1.0,
+      "detach_decoder":False,
+      "cross_att_decoder":False
+   },
+
+   "loss_weights":{
+      "encoder_bce_loss":0.5,
+      "decoder_bce_loss":0.5,
+   },
+
+   "causal":True,
+   "sample_rate":1,
+   "temporal_aug":True,
+
+   "batch_size":1,
+   "learning_rate":0.00005,
+   "weight_decay":1e-5,
+   "num_epochs":1201,
+   "log_freq":100,
+   "class_weighting":[],
+   "set_sampling_seed":True,
+
+   "log_train_results":True,
+   "log_APs": ["i", "v", "t", "iv", "it", "ivt"],
+   # "log_APs": ["ivt"],
+   "evaluation_protocol": "Non-Challenge",
+
+   "evalonly_params": {          # to use for only evaluation on pre-trained models
+       "pretrain_naming": "",
+       "epochs": [],
+       "mode": "decoder-agg",
+   },
+}
+
+
+default_params_T50 = copy.deepcopy(default_params)
+default_params_T50['dataset_name'] = 'CholecT50'
+
+default_params_T45 = copy.deepcopy(default_params)
+default_params_T45['dataset_name'] = 'CholecT45'
+default_params_T45['weight_decay'] = 5e-5
+
+default_params_challenge = copy.deepcopy(default_params)
+default_params_challenge['dataset_name'] = 'Challenge'
+default_params_challenge['evaluation_protocol'] = 'Challenge'
+
+# params['log_APs'] = ["i", "v", "t", "iv", "it", "ivt"]
+# params['evaluation_protocol'] = ["Non-Challenge", "Challenge"][0]
+
+################
+
+feature_dim_dict = {
+  'feature-RDV-2500': 2500,
+  'feature-RDV-4x5': 2000,
+  'feature-RDV-4x4': 1600, 
+  'feature-RDV-2x2': 400,
+  'feature-RDV-6x8': 4800,
+  'feature-RDV-3x3': 900,
+  'feature-SelfDistillSwin': 1024,
+}
+
+def generate_cv_config(params_template, default_feature_prefix, options, naming_prefix, repeat_num, split_num, pretrain_prefix=None, pretrain_suffix=None, pretrain_epochs=None):
+
+    for key, values in options.items():
+        for iv, value in enumerate(values):
+            for repeat_id in range(repeat_num):
+                for split_id in range(1, split_num+1):
+
+                    params = copy.deepcopy(params_template)
+
+                    if type(value) == list:
+                        params['naming'] = f'{naming_prefix}-S{split_id}-{repeat_id}-{key}-{"_".join([str(i) for i in value])}'
+                        if type(value[0]) == list:
+                            params['naming'] = f'{naming_prefix}-S{split_id}-{repeat_id}-{key}-{iv}'
+                    else:
+                        params['naming'] = f'{naming_prefix}-S{split_id}-{repeat_id}-{key}-{value}'
+
+                    if pretrain_prefix and pretrain_suffix and pretrain_epochs:
+                        params['evalonly_params']['pretrain_naming'] = f'{pretrain_prefix}-S{split_id}-{repeat_id}{pretrain_suffix}'
+                        params['evalonly_params']['epochs'] = pretrain_epochs
+
+                    #################
+                    
+                    if params['dataset_name'] == 'CholecT45':
+                        params['train_video_list'] = train_videos_T45_cv[f'k{split_id}']
+                        params['test_video_list'] = test_videos_T45_cv[f'k{split_id}']
+                        params['val_video_list'] = []
+                        
+                    if params['dataset_name'] == 'CholecT50':
+                        params['train_video_list'] = train_videos_T50_cv[f'k{split_id}']
+                        params['test_video_list'] = test_videos_T50_cv[f'k{split_id}']
+                        params['val_video_list'] = []
+
+                    if params['dataset_name'] == 'Challenge':
+                        params['train_video_list'] = train_videos_challenge[f'k{split_id}']
+                        params['test_video_list'] = test_videos_challenge[f'k{split_id}']
+                        params['val_video_list'] = []
+                                            
+                    params['feature_subdir'] = f'{default_feature_prefix}-k{split_id}'
+                    params['encoder_params']['input_dim'] = feature_dim_dict[default_feature_prefix]
+
+                    params['num_epochs'] = 1201
+                    params['log_train_results'] = False # to be turned on later
+                    
+                    ################
+
+                    assert (key != 'dataset_name')
+                    # assert (key != 'feature_prefix')    #!!!!!!!!!!!!!
+
+                    if key == 'baseline':
+                        pass
+                    elif key.startswith('encoder_'):
+                        sub_key = key[8:]
+                        assert(sub_key in params['encoder_params'].keys())
+                        params['encoder_params'][sub_key] = value
+                        # if sub_key == 'num_layers':
+                        #     temp = [value-1, value-2, value-3]
+                        #     params['encoder_params']['feature_layer_indices'] = [l for l in temp if l > 0]
+                    elif key.startswith('decoder_'):
+                        sub_key = key[8:]
+                        assert(sub_key in params['decoder_params'].keys())
+                        params['decoder_params'][sub_key] = value
+
+                    elif key.startswith('diffusion_'):
+                        sub_key = key[10:]
+                        assert(sub_key in params['diffusion_params'].keys())
+                        params['diffusion_params'][sub_key] = value
+
+                    elif key.startswith('lossw_'):
+                        sub_key = key[6:]
+                        assert(sub_key in params['loss_weights'].keys())
+                        params['loss_weights'][sub_key] = value
+
+                    elif key.startswith('evalonly_'):
+                        sub_key = key[9:]
+                        assert(sub_key in params['evalonly_params'].keys())
+                        params['evalonly_params'][sub_key] = value
+
+                    elif key == 'feature_prefix':
+                        params['feature_subdir'] = f'{value}-k{split_id}'
+                        params['encoder_params']['input_dim'] = feature_dim_dict[value]
+
+                    else:
+                        assert(key in params.keys())
+                        params[key] = value
+
+                        if key == 'target_components':
+                            if value != ['ivt', 'i', 'v', 't']:
+                                params['diffusion_params']['guidance_scale'] = 0
+                            if 'i' not in value:
+                                params['log_APs'].remove('i')
+                            if 'v' not in value:
+                                params['log_APs'].remove('v')
+                            if 't' not in value:
+                                params['log_APs'].remove('t')
+
+
+                    if not os.path.exists('configs'):
+                        os.makedirs('configs')
+                    
+                    file_name = os.path.join('configs', f'{params["naming"]}.json')
+
+                    with open(file_name, 'w') as outfile:
+                        json.dump(params, outfile, ensure_ascii=False)
+
+
+################# CV Settings ####################
+
+options = {
+    "baseline": ['R1', 'R2', 'R3'],
+    "target_components": [['ivt'], ['ivt', 'i', 'v', 't', 'iv', 'it']],
+    "class_weighting": [['ivt', 'i', 'v', 't'], ['i', 'v', 't'], ['ivt']],
+    "diffusion_cross_att_decoder": [True],
+    "causal": [False],
+}
+
+generate_cv_config(
+  params_template=default_params_T50, 
+  default_feature_prefix='feature-RDV-2500', 
+  options=options, 
+  naming_prefix='RDV-T50RealExp2nd', 
+  repeat_num=3, 
+  split_num=5, 
+  pretrain_prefix=None, 
+  pretrain_suffix=None, 
+  pretrain_epochs=None
+)
+
+options = {
+    "baseline": ['R1', 'R2', 'R3'],
+    "causal": [False],
+}
+
+generate_cv_config(
+  params_template=default_params_T45, 
+  default_feature_prefix='feature-RDV-4x4', # 3x3 is lightly better
+  options=options, 
+  naming_prefix='RDV-T45RealExp2nd', 
+  repeat_num=3, 
+  split_num=5, 
+  pretrain_prefix=None, 
+  pretrain_suffix=None, 
+  pretrain_epochs=None
+)
+
+
+options = {
+    "baseline": ['R1', 'R2', 'R3'],
+    "causal": [False],
+}
+
+generate_cv_config(
+  params_template=default_params_T50, 
+  default_feature_prefix='feature-SelfDistillSwin', # feature not ready yet!
+  options=options, 
+  naming_prefix='Swin-T50RealExp2nd', 
+  repeat_num=3, 
+  split_num=5, 
+  pretrain_prefix=None, 
+  pretrain_suffix=None, 
+  pretrain_epochs=None
+)
+
+options = {
+    "baseline": ['R1', 'R2', 'R3'],
+    "causal": [False],
+}
+
+generate_cv_config(
+  params_template=default_params_T45, 
+  default_feature_prefix='feature-SelfDistillSwin',
+  options=options, 
+  naming_prefix='Swin-T45RealExp2nd', 
+  repeat_num=3, 
+  split_num=5, 
+  pretrain_prefix=None, 
+  pretrain_suffix=None, 
+  pretrain_epochs=None
+)
+
+################# Challenge Settings ####################
+
+options = {
+    "weight_decay": [1e-6, 1e-5, 2e-5, 5e-5, 1e-4],
+    "causal": [False],
+}
+
+generate_cv_config(
+  params_template=default_params_challenge, 
+  default_feature_prefix='feature-RDV-2500',
+  options=options, 
+  naming_prefix='RDV-ChallengeInitTry', 
+  repeat_num=3, 
+  split_num=1, 
+  pretrain_prefix=None, 
+  pretrain_suffix=None, 
+  pretrain_epochs=None
+)
+
+# ############### CV Settings: Inference Only ####################
+
+# options = {
+#     "diffusion_sampling_timesteps": [1, 2, 4, 8, 16, 32, 64, 128],
+#     "diffusion_guidance_scale": [0.00, 0.25, 0.50, 0.75, 1.00],
+# }
+
+# generate_cv_config(
+#   params_template=default_params_T50, 
+#   default_feature_prefix='feature-RDV-2500', 
+#   options=options, 
+#   naming_prefix='RDV-T50RealExp2ndInfer', 
+#   repeat_num=3, 
+#   split_num=5, 
+#   pretrain_prefix='RDV-T50RealExp2nd',      # To be confirmed!!!!!!!!!
+#   pretrain_suffix='-baseline-R2',           # To be confirmed!!!!!!!!!
+#   pretrain_epochs=[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100] # when summarizing results, need to fix the same epochs (500)
+# )
+
+
+
+
+
+
+
+
+#################### GD
+
+# # encoder_num_f_maps_opt = [32, 64, 128] # 64
+# # decoder_num_f_maps_opt = [64, 128, 256] # 256
+# # weight_decay_opt = [1e-5, 2e-5, 5e-5] # any, 5e-5 is better, try weight_decay_again!
+# conclusion: 64, 256, 1e-5, no need to change any more
+
+# encoder_feature_layer_indices_opt = [[1,2,3], [2,3], [3], [2]]
+# decoder_kernel_size_opt = [7, 9, 11]
+# decoder_time_emb_dim_opt = [128, 256, 512]
+
+# # to do
+# # encoder_num_layers
+# # # decoder_num_layers_opt = [2, 4]
+# # encoder_kernel_size
+
+# naming_prefix = 'RDV-T45GD2nd'
+
+# repeat_num = 3
+# split_num = 5
+
+# for i1, encoder_num_f_maps in enumerate(encoder_num_f_maps_opt):
+#     for i2, decoder_num_f_maps in enumerate(decoder_num_f_maps_opt):
+#         for i3, weight_decay in enumerate(weight_decay_opt):
+
+#             for repeat_id in range(repeat_num):
+#                 for split_id in range(1, split_num+1):
+
+#                     params = copy.deepcopy(default_params)
+#                     params['encoder_params']['num_f_maps'] = encoder_num_f_maps
+#                     params['decoder_params']['num_f_maps'] = decoder_num_f_maps
+#                     params['weight_decay'] = weight_decay
+
+#                     params['naming'] = f'{naming_prefix}-S{split_id}-{repeat_id}-{i1}-{i2}-{i3}'
+#                     params['root_data_dir'] = '/g/data/zg12/dataset'
+#                     params['result_dir'] = '/g/data/zg12/result'
+
+#                     ################
+                    
+#                     if params['dataset_name'] == 'CholecT45':
+#                         params['feature_subdir'] = f'feature-RDV-CholecT45-2500-k{split_id}'
+#                         params['encoder_params']['input_dim'] = 2500 # To improve features later
+#                         params['train_video_list'] = train_videos_T45_cv[f'k{split_id}']
+#                         params['test_video_list'] = test_videos_T45_cv[f'k{split_id}']
+#                         params['val_video_list'] = []
+                    
+#                     if params['dataset_name'] == 'CholecT50':
+#                         params['feature_subdir'] = f'feature-RDV-CholecT50-2500-k{split_id}'
+#                         params['encoder_params']['input_dim'] = 2500 # To improve features later
+#                         params['train_video_list'] = train_videos_T50_cv[f'k{split_id}']
+#                         params['test_video_list'] = test_videos_T50_cv[f'k{split_id}']
+#                         params['val_video_list'] = []
+                    
+#                     ################
+
+#                     params['log_APs'] = ["i", "v", "t", "iv", "it", "ivt"]
+#                     params['evaluation_protocol'] = ["Non-Challenge", "Challenge"][0]
+
+#                     params['num_epochs'] = 2001
+#                     params['log_train_results'] = False
+                    
+#                     ################
+
+#                     if not os.path.exists('configs'):
+#                         os.makedirs('configs')
+                    
+#                     file_name = os.path.join('configs', f'{params["naming"]}.json')
+
+#                     with open(file_name, 'w') as outfile:
+#                         json.dump(params, outfile, ensure_ascii=False)
+
