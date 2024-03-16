@@ -163,13 +163,13 @@ class ASDiffusionModel(nn.Module):
 
         return sqrt_alphas_cumprod_t * x_start + sqrt_one_minus_alphas_cumprod_t * noise
     
-    def model_predictions(self, backbone_feats, x, t):
+    def model_predictions(self, backbone_feats, x, t, ant_range):
 
         x_m = torch.clamp(x, min=-1 * self.scale, max=self.scale) # [-scale, +scale]
         x_m = denormalize(x_m, self.scale)                        # [0, 1]
 
         assert(x_m.max() <= 1 and x_m.min() >= 0)
-        x_start = self.decoder(backbone_feats, t, x_m.float()) # torch.Size([1, C, T])
+        x_start = self.decoder(backbone_feats, t, x_m.float(), ant_range) # torch.Size([1, C, T])
         x_start = F.sigmoid(x_start)
 
         ################# Currently Guidance is Hard Coded. Components must be IVT, I, V, T ############################
@@ -231,7 +231,7 @@ class ASDiffusionModel(nn.Module):
         return event_diffused, noise, t
 
     
-    def forward(self, backbone_feats, t, event_diffused): # only for train
+    def forward(self, backbone_feats, t, event_diffused, ant_range): # only for train
 
         if self.detach_decoder:
             backbone_feats = backbone_feats.detach()
@@ -241,18 +241,21 @@ class ASDiffusionModel(nn.Module):
         cond_type = random.choice(self.cond_types)
 
         if cond_type == 'full':
-            event_out = self.decoder(backbone_feats, t, event_diffused.float())
+            event_out = self.decoder(backbone_feats, t, event_diffused.float(), ant_range)
         
         elif cond_type == 'zero':
-            event_out = self.decoder(torch.zeros_like(backbone_feats), t, event_diffused.float())
+            event_out = self.decoder(torch.zeros_like(backbone_feats), t, event_diffused.float(), ant_range)
 
         else:
             raise Exception('Invalid Cond Type')
 
         return event_out
 
-    def get_training_loss(self, video_feats, event_gt, class_weights):
+    def get_training_loss(self, video_feats, event_gt, class_weights, ant_range):
 
+
+        ant = torch.randint(0, self.num_timesteps, (1,), device=self.device).long()
+        ant[0] = ant_range
 
         if class_weights is not None:
             bce_criterion = nn.BCEWithLogitsLoss(reduction='none', pos_weight=class_weights.unsqueeze(1)) # C, 1
@@ -269,7 +272,7 @@ class ASDiffusionModel(nn.Module):
         ########## 
 
         event_diffused, noise, t = self.prepare_targets(event_gt)
-        event_out = self.forward(backbone_feats, t, event_diffused)
+        event_out = self.forward(backbone_feats, t, event_diffused, ant)
         decoder_bce_loss = bce_criterion(event_out, event_gt)
         decoder_bce_loss = decoder_bce_loss.mean()
 
@@ -282,7 +285,10 @@ class ASDiffusionModel(nn.Module):
 
 
     @torch.no_grad()
-    def ddim_sample(self, video_feats, seed=None):
+    def ddim_sample(self, video_feats, ant_range, seed=None):
+
+        ant = torch.randint(0, self.num_timesteps, (1,), device=self.device).long()
+        ant[0] = ant_range
 
         if self.use_instance_norm:
             video_feats = self.ins_norm(video_feats)
@@ -315,9 +321,9 @@ class ASDiffusionModel(nn.Module):
 
             # TO DO: Only for debug! To be improved
             if self.cond_types == ['zero']:
-                pred_noise, x_start = self.model_predictions(torch.zeros_like(backbone_feats), x_time, time_cond)
+                pred_noise, x_start = self.model_predictions(torch.zeros_like(backbone_feats), x_time, time_cond, ant)
             else:
-                pred_noise, x_start = self.model_predictions(backbone_feats, x_time, time_cond)
+                pred_noise, x_start = self.model_predictions(backbone_feats, x_time, time_cond, ant)
 
             x_return = torch.clone(x_start)
             
@@ -429,9 +435,6 @@ class DecoderModel(nn.Module):
 
 
 
-
-
-
 class DecoderModelNoCross(nn.Module):
     def __init__(self, input_dim, num_classes,
         num_layers, num_f_maps, time_emb_dim, kernel_size, dropout_rate, causal): # input_dim means condition dim
@@ -445,20 +448,30 @@ class DecoderModelNoCross(nn.Module):
             torch.nn.Linear(time_emb_dim, time_emb_dim)
         ])
 
+        self.ant_in = nn.ModuleList([
+            torch.nn.Linear(time_emb_dim, time_emb_dim),
+            torch.nn.Linear(time_emb_dim, time_emb_dim)
+        ])
+
         self.conv_in = nn.Conv1d(input_dim + num_classes, num_f_maps, 1)
         self.module = MixedConvAttModule(num_layers, num_f_maps, kernel_size, dropout_rate, causal, time_emb_dim)
         self.conv_out = nn.Conv1d(num_f_maps, num_classes, 1)
 
 
-    def forward(self, x, t, event):
+    def forward(self, x, t, event, ant_range):
 
         time_emb = get_timestep_embedding(t, self.time_emb_dim)
         time_emb = self.time_in[0](time_emb)
         time_emb = swish(time_emb)
         time_emb = self.time_in[1](time_emb)
 
+        ant_emb = get_timestep_embedding(ant_range, self.time_emb_dim)
+        ant_emb = self.ant_in[0](ant_emb)
+        ant_emb = swish(ant_emb)
+        ant_emb = self.ant_in[1](ant_emb)
+
         x = self.conv_in(torch.cat((x, event), 1))
-        x = self.module(x, time_emb=time_emb)
+        x = self.module(x, time_emb=time_emb+ant_emb)
         out = self.conv_out(x)
 
         return out

@@ -82,11 +82,11 @@ def get_data_dict(root_data_dir, dataset_name, feature_subdir, mapping_file,
 
         assert(feature.shape[1] == event_seq_ivt.shape[0]) # 1,T,F / T,C
 
-        if ant_range > 0:
-            feature = feature[:,:-ant_range,:]
-            event_seq_ivt = event_seq_ivt[ant_range:,:]
+        # if ant_range > 0:
+        #     feature = feature[:,:-ant_range,:]
+        #     event_seq_ivt = event_seq_ivt[ant_range:,:]
 
-        assert(feature.shape[1] == event_seq_ivt.shape[0]) # 1,T,F / T,C
+        # assert(feature.shape[1] == event_seq_ivt.shape[0]) # 1,T,F / T,C
 
         event_seq_i, event_seq_v, event_seq_t, event_seq_iv, event_seq_it = split_tensor_ivt(event_seq_ivt, mapping_file)
 

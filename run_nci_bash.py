@@ -21,7 +21,7 @@ import os
 import pdb
 import numpy as np
 
-prefix = 'RDV-T45AnticipationTry'
+prefix = 'RDV-T45AntEmbFix10'
 
 program_file = ['main.py', 'test.py'][0]
 

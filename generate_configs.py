@@ -284,7 +284,7 @@ def generate_cv_config(params_template, default_feature_prefix, options, naming_
 # )
 
 options = {
-    "baseline": ['R1'],
+    # "baseline": ['R1'],
     "ant_range": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25, 30, 40, 50, 75, 100, 200]
 }
 
@@ -292,7 +292,7 @@ generate_cv_config(
   params_template=default_params_T45, 
   default_feature_prefix='feature-RDV-4x4',
   options=options, 
-  naming_prefix='RDV-T45AnticipationTry', 
+  naming_prefix='RDV-T45AntEmbFix10', 
   repeat_num=3, 
   split_num=5, 
   pretrain_prefix=None, 

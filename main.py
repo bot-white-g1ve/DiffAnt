@@ -20,7 +20,10 @@ import pdb
 
 class Trainer:
     def __init__(self, encoder_params, decoder_params, diffusion_params, causal, 
-        num_targets, sample_rate, temporal_aug, set_sampling_seed, guidance_matrices, device):
+        num_targets, sample_rate, temporal_aug, set_sampling_seed, guidance_matrices, ant_range, device):
+
+        assert(sample_rate == 1)
+        assert(ant_range > 0)
 
         self.device = device
         self.num_targets = num_targets
@@ -30,6 +33,7 @@ class Trainer:
         self.temporal_aug = temporal_aug
         self.set_sampling_seed = set_sampling_seed
         self.guidance_matrices = guidance_matrices
+        self.ant_range = ant_range
 
         self.model = ASDiffusionModel(encoder_params, decoder_params, diffusion_params, causal, self.num_targets, self.guidance_matrices, self.device)
         print('Model Size: ', sum(p.numel() for p in self.model.parameters()))
@@ -81,9 +85,16 @@ class Trainer:
                 feature, label, video = data
                 feature, label = feature.to(device), label.to(device)
 
+                # ant_rid = random.randint(0, self.ant_range * 2) # a<=x<=b
+                ant_rid = random.randint(0, 10) # a<=x<=b
+                if ant_rid > 0:
+                    feature = feature[:,:,:-ant_rid]
+                    label = label[:,:,ant_rid:]
+
                 loss_dict = self.model.get_training_loss(feature, 
                     event_gt=label,  # 1, C, T
-                    class_weights=class_weights
+                    class_weights=class_weights,
+                    ant_range=ant_rid,
                 )
 
                 # ##############
@@ -210,6 +221,9 @@ class Trainer:
 
             feature, label, video = test_dataset[video_idx]
 
+            feature = [i[:,:,:-self.ant_range] for i in feature]
+            label = label[:,:,self.ant_range:]
+
             # feature:   [torch.Size([1, F, Sampled T])]
             # label:     torch.Size([1, C, Original T])
             # output: [torch.Size([1, C, Sampled T])]
@@ -224,7 +238,7 @@ class Trainer:
                            for i in range(len(feature))] # output is a list of tuples
                     output = [F.sigmoid(i).cpu() for i in output]
                 if mode == 'decoder-agg':
-                    output = [self.model.ddim_sample(feature[i].to(device), seed) 
+                    output = [self.model.ddim_sample(feature[i].to(device), self.ant_range, seed) 
                                for i in range(len(feature))] # output is a list of tuples
                     output = [i.cpu() for i in output]
 
@@ -234,7 +248,7 @@ class Trainer:
                            for i in range(len(feature))]
                     output_encoder = [F.sigmoid(i).cpu() for i in output_encoder]
 
-                    output_decoder = [self.model.ddim_sample(feature[i].to(device), seed) 
+                    output_decoder = [self.model.ddim_sample(feature[i].to(device), self.ant_range, seed) 
                                for i in range(len(feature))] 
                     output_decoder = [i.cpu() for i in output_decoder]
 
@@ -253,14 +267,14 @@ class Trainer:
                     output = self.model.encoder(feature[len(feature)//2].to(device)) 
                     output = F.sigmoid(output).cpu()
                 if mode == 'decoder-noagg':
-                    output = self.model.ddim_sample(feature[len(feature)//2].to(device), seed) 
+                    output = self.model.ddim_sample(feature[len(feature)//2].to(device), self.ant_range, seed) 
                     output = output.cpu() 
                 if mode == 'ensemble-noagg':
                     
                     output_encoder = self.model.encoder(feature[len(feature)//2].to(device)) 
                     output_encoder = F.sigmoid(output_encoder).cpu()
 
-                    output_decoder = self.model.ddim_sample(feature[len(feature)//2].to(device), seed) 
+                    output_decoder = self.model.ddim_sample(feature[len(feature)//2].to(device), self.ant_range, seed) 
                     output_decoder = output_decoder.cpu() 
 
                     output = (output_encoder + output_decoder) / 2 # TO DO: maybe change combination weights
@@ -465,7 +479,7 @@ if __name__ == '__main__':
 
 
     trainer = Trainer(dict(encoder_params), dict(decoder_params), dict(diffusion_params), 
-        causal, num_targets, sample_rate, temporal_aug, set_sampling_seed, guidance_matrices,
+        causal, num_targets, sample_rate, temporal_aug, set_sampling_seed, guidance_matrices, ant_range,
         device=device
     )    
 
