@@ -16,6 +16,7 @@ from model import ASDiffusionModel
 from tqdm import tqdm
 from utils import load_config_file, set_random_seed
 from utils import get_convert_matrix
+import random
 import pdb
 
 class Trainer:
@@ -86,7 +87,9 @@ class Trainer:
                 feature, label = feature.to(device), label.to(device)
 
                 # ant_rid = random.randint(0, self.ant_range * 2) # a<=x<=b
-                ant_rid = random.randint(0, 10) # a<=x<=b
+                # ant_rid = random.randint(0, 10) # a<=x<=b
+                ant_rid = random.randint(0, self.ant_range) # a<=x<=b
+
                 if ant_rid > 0:
                     feature = feature[:,:,:-ant_rid]
                     label = label[:,:,ant_rid:]
