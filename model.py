@@ -141,6 +141,8 @@ class ASDiffusionModel(nn.Module):
         decoder_params['causal'] = self.causal
         encoder_params['causal'] = self.causal
 
+        encoder_params['time_emb_dim'] = decoder_params['time_emb_dim'] # ugly TO DO, also TO DO: re-write time_emb and ant_emd
+
         self.encoder = EncoderModel(**encoder_params)
 
         if self.cross_att_decoder:
@@ -253,9 +255,8 @@ class ASDiffusionModel(nn.Module):
 
     def get_training_loss(self, video_feats, event_gt, class_weights, ant_range):
 
-
         ant = torch.randint(0, self.num_timesteps, (1,), device=self.device).long()
-        ant[0] = ant_range
+        ant[0] = ant_range # ugly: TO DO
 
         if class_weights is not None:
             bce_criterion = nn.BCEWithLogitsLoss(reduction='none', pos_weight=class_weights.unsqueeze(1)) # C, 1
@@ -265,7 +266,7 @@ class ASDiffusionModel(nn.Module):
         if self.use_instance_norm:
             video_feats = self.ins_norm(video_feats)
 
-        encoder_out, backbone_feats = self.encoder(video_feats, get_features=True)
+        encoder_out, backbone_feats = self.encoder(video_feats, ant, get_features=True)
         encoder_bce_loss = bce_criterion(encoder_out, event_gt) # B, C, T
         encoder_bce_loss = encoder_bce_loss.mean()
 
@@ -288,12 +289,12 @@ class ASDiffusionModel(nn.Module):
     def ddim_sample(self, video_feats, ant_range, seed=None):
 
         ant = torch.randint(0, self.num_timesteps, (1,), device=self.device).long()
-        ant[0] = ant_range
+        ant[0] = ant_range # ugly: TO DO
 
         if self.use_instance_norm:
             video_feats = self.ins_norm(video_feats)
 
-        encoder_out, backbone_feats = self.encoder(video_feats, get_features=True)
+        encoder_out, backbone_feats = self.encoder(video_feats, ant, get_features=True)
 
         if seed is not None:
             random.seed(seed)
@@ -362,23 +363,35 @@ class ASDiffusionModel(nn.Module):
 
 
 class EncoderModel(nn.Module):
-    def __init__(self, num_layers, num_f_maps, input_dim, num_classes, kernel_size, 
+    def __init__(self, num_layers, num_f_maps, input_dim, num_classes, time_emb_dim, kernel_size, 
                  normal_dropout_rate, channel_dropout_rate, temporal_dropout_rate, causal, 
                  feature_layer_indices=None):
         super(EncoderModel, self).__init__()
         
         self.num_classes = num_classes
         self.feature_layer_indices = feature_layer_indices
+        self.time_emb_dim = time_emb_dim
         
         self.dropout_channel = nn.Dropout2d(p=channel_dropout_rate)
         self.dropout_temporal = nn.Dropout2d(p=temporal_dropout_rate)
         
+        self.ant_in = nn.ModuleList([
+            torch.nn.Linear(time_emb_dim, time_emb_dim),
+            torch.nn.Linear(time_emb_dim, time_emb_dim)
+        ])
+
         self.conv_in = nn.Conv1d(input_dim, num_f_maps, 1)
-        self.encoder = MixedConvAttModule(num_layers, num_f_maps, kernel_size, normal_dropout_rate, causal)
+        self.encoder = MixedConvAttModule(num_layers, num_f_maps, kernel_size, normal_dropout_rate, causal, time_emb_dim=time_emb_dim)
         self.conv_out = nn.Conv1d(num_f_maps, num_classes, 1)
 
 
-    def forward(self, x, get_features=False):
+    def forward(self, x, ant_range, get_features=False):
+
+        ant_emb = get_timestep_embedding(ant_range, self.time_emb_dim)
+        ant_emb = self.ant_in[0](ant_emb)
+        ant_emb = swish(ant_emb)
+        ant_emb = self.ant_in[1](ant_emb)
+
         if get_features:
             assert(self.feature_layer_indices is not None and len(self.feature_layer_indices) > 0)
             features = []
@@ -386,7 +399,7 @@ class EncoderModel(nn.Module):
                 features.append(x)
             x = self.dropout_channel(x.unsqueeze(3)).squeeze(3)
             x = self.dropout_temporal(x.unsqueeze(3).transpose(1, 2)).squeeze(3).transpose(1, 2)
-            x, feature = self.encoder(self.conv_in(x), feature_layer_indices=self.feature_layer_indices)
+            x, feature = self.encoder(self.conv_in(x), feature_layer_indices=self.feature_layer_indices, time_emb=ant_emb)
             if feature is not None:
                 features.append(feature)
             out = self.conv_out(x)
@@ -396,7 +409,7 @@ class EncoderModel(nn.Module):
         else:
             x = self.dropout_channel(x.unsqueeze(3)).squeeze(3)
             x = self.dropout_temporal(x.unsqueeze(3).transpose(1, 2)).squeeze(3).transpose(1, 2)
-            out = self.conv_out(self.encoder(self.conv_in(x), feature_layer_indices=None))
+            out = self.conv_out(self.encoder(self.conv_in(x), feature_layer_indices=None, time_emb=ant_emb))
             return out
 
 

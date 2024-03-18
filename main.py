@@ -227,6 +227,9 @@ class Trainer:
             feature = [i[:,:,:-self.ant_range] for i in feature]
             label = label[:,:,self.ant_range:]
 
+            ant = torch.randint(0, 99, (1,), device=self.device).long()
+            ant[0] = self.ant_range # ugly: TO DO
+
             # feature:   [torch.Size([1, F, Sampled T])]
             # label:     torch.Size([1, C, Original T])
             # output: [torch.Size([1, C, Sampled T])]
@@ -237,7 +240,7 @@ class Trainer:
             if mode in ['encoder-agg', 'decoder-agg', 'ensemble-agg']:
                 
                 if mode == 'encoder-agg':
-                    output = [self.model.encoder(feature[i].to(device)) 
+                    output = [self.model.encoder(feature[i].to(device), ant) 
                            for i in range(len(feature))] # output is a list of tuples
                     output = [F.sigmoid(i).cpu() for i in output]
                 if mode == 'decoder-agg':
@@ -247,7 +250,7 @@ class Trainer:
 
                 if mode == 'ensemble-agg':
 
-                    output_encoder = [self.model.encoder(feature[i].to(device)) 
+                    output_encoder = [self.model.encoder(feature[i].to(device), ant) 
                            for i in range(len(feature))]
                     output_encoder = [F.sigmoid(i).cpu() for i in output_encoder]
 
@@ -267,14 +270,14 @@ class Trainer:
             if mode in ['encoder-noagg', 'decoder-noagg', 'ensemble-noagg']: # temporal aug must be true
 
                 if mode == 'encoder-noagg':
-                    output = self.model.encoder(feature[len(feature)//2].to(device)) 
+                    output = self.model.encoder(feature[len(feature)//2].to(device), ant) 
                     output = F.sigmoid(output).cpu()
                 if mode == 'decoder-noagg':
                     output = self.model.ddim_sample(feature[len(feature)//2].to(device), self.ant_range, seed) 
                     output = output.cpu() 
                 if mode == 'ensemble-noagg':
                     
-                    output_encoder = self.model.encoder(feature[len(feature)//2].to(device)) 
+                    output_encoder = self.model.encoder(feature[len(feature)//2].to(device), ant) 
                     output_encoder = F.sigmoid(output_encoder).cpu()
 
                     output_decoder = self.model.ddim_sample(feature[len(feature)//2].to(device), self.ant_range, seed) 
