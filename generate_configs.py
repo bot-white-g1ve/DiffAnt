@@ -77,9 +77,10 @@ default_params = {
    "encoder_params":{
       "use_instance_norm":False,
       "num_layers":4,
-      "num_f_maps":64,
+      "num_f_maps":128,
       "input_dim":2500,
       "kernel_size":5,
+      "ant_emb_dim":512,
       "normal_dropout_rate":0.1,
       "channel_dropout_rate":0.5,
       "temporal_dropout_rate":0.5,
@@ -91,6 +92,7 @@ default_params = {
       "num_layers":2,  
       "num_f_maps":256, 
       "time_emb_dim":512,
+      "ant_emb_dim":512,
       "kernel_size":11,
       "dropout_rate":0.2
    },
@@ -144,6 +146,14 @@ default_params_T50['dataset_name'] = 'CholecT50'
 default_params_T45 = copy.deepcopy(default_params)
 default_params_T45['dataset_name'] = 'CholecT45'
 default_params_T45['weight_decay'] = 5e-5
+
+
+################
+
+# default_params_T45['encoder_params']['num_f_maps'] = 128
+# default_params_T50['encoder_params']['num_f_maps'] = 128
+# default_params_T45['decoder_params']['num_f_maps'] = 512
+# default_params_T50['decoder_params']['num_f_maps'] = 512
 
 ################
 
@@ -292,7 +302,7 @@ generate_cv_config(
   params_template=default_params_T45, 
   default_feature_prefix='feature-RDV-4x4',
   options=options, 
-  naming_prefix='RDV-T45AntEmbFix10', 
+  naming_prefix='RDV-T45Adax1Dec512', 
   repeat_num=3, 
   split_num=5, 
   pretrain_prefix=None, 

@@ -141,11 +141,10 @@ class ASDiffusionModel(nn.Module):
         decoder_params['causal'] = self.causal
         encoder_params['causal'] = self.causal
 
-        encoder_params['time_emb_dim'] = decoder_params['time_emb_dim'] # ugly TO DO, also TO DO: re-write time_emb and ant_emd
-
         self.encoder = EncoderModel(**encoder_params)
 
         if self.cross_att_decoder:
+            raise Exception('Not Implemented')
             self.decoder = DecoderModel(**decoder_params)
         else:
             self.decoder = DecoderModelNoCross(**decoder_params)
@@ -363,31 +362,31 @@ class ASDiffusionModel(nn.Module):
 
 
 class EncoderModel(nn.Module):
-    def __init__(self, num_layers, num_f_maps, input_dim, num_classes, time_emb_dim, kernel_size, 
+    def __init__(self, num_layers, num_f_maps, input_dim, num_classes, ant_emb_dim, kernel_size, 
                  normal_dropout_rate, channel_dropout_rate, temporal_dropout_rate, causal, 
                  feature_layer_indices=None):
         super(EncoderModel, self).__init__()
         
         self.num_classes = num_classes
         self.feature_layer_indices = feature_layer_indices
-        self.time_emb_dim = time_emb_dim
+        self.ant_emb_dim = ant_emb_dim
         
         self.dropout_channel = nn.Dropout2d(p=channel_dropout_rate)
         self.dropout_temporal = nn.Dropout2d(p=temporal_dropout_rate)
         
         self.ant_in = nn.ModuleList([
-            torch.nn.Linear(time_emb_dim, time_emb_dim),
-            torch.nn.Linear(time_emb_dim, time_emb_dim)
+            torch.nn.Linear(ant_emb_dim, ant_emb_dim),
+            torch.nn.Linear(ant_emb_dim, ant_emb_dim)
         ])
 
         self.conv_in = nn.Conv1d(input_dim, num_f_maps, 1)
-        self.encoder = MixedConvAttModule(num_layers, num_f_maps, kernel_size, normal_dropout_rate, causal, time_emb_dim=time_emb_dim)
+        self.encoder = MixedConvAttModule(num_layers, num_f_maps, kernel_size, normal_dropout_rate, causal, time_emb_dim=ant_emb_dim)
         self.conv_out = nn.Conv1d(num_f_maps, num_classes, 1)
 
 
     def forward(self, x, ant_range, get_features=False):
 
-        ant_emb = get_timestep_embedding(ant_range, self.time_emb_dim)
+        ant_emb = get_timestep_embedding(ant_range, self.ant_emb_dim)
         ant_emb = self.ant_in[0](ant_emb)
         ant_emb = swish(ant_emb)
         ant_emb = self.ant_in[1](ant_emb)
@@ -414,47 +413,48 @@ class EncoderModel(nn.Module):
 
 
 
-class DecoderModel(nn.Module):
-    def __init__(self, input_dim, num_classes,
-        num_layers, num_f_maps, time_emb_dim, kernel_size, dropout_rate, causal):
+# class DecoderModel(nn.Module):
+#     def __init__(self, input_dim, num_classes,
+#         num_layers, num_f_maps, time_emb_dim, kernel_size, dropout_rate, causal):
         
-        super(DecoderModel, self).__init__()
+#         super(DecoderModel, self).__init__()
 
-        self.time_emb_dim = time_emb_dim
+#         self.time_emb_dim = time_emb_dim
 
-        self.time_in = nn.ModuleList([
-            torch.nn.Linear(time_emb_dim, time_emb_dim),
-            torch.nn.Linear(time_emb_dim, time_emb_dim)
-        ])
+#         self.time_in = nn.ModuleList([
+#             torch.nn.Linear(time_emb_dim, time_emb_dim),
+#             torch.nn.Linear(time_emb_dim, time_emb_dim)
+#         ])
 
-        self.conv_in = nn.Conv1d(num_classes, num_f_maps, 1)
-        self.module = MixedConvAttModuleV2(num_layers, num_f_maps, input_dim, kernel_size, dropout_rate, causal, time_emb_dim)
-        self.conv_out =  nn.Conv1d(num_f_maps, num_classes, 1)
+#         self.conv_in = nn.Conv1d(num_classes, num_f_maps, 1)
+#         self.module = MixedConvAttModuleV2(num_layers, num_f_maps, input_dim, kernel_size, dropout_rate, causal, time_emb_dim)
+#         self.conv_out =  nn.Conv1d(num_f_maps, num_classes, 1)
 
 
-    def forward(self, x, t, event):
+#     def forward(self, x, t, event):
 
-        time_emb = get_timestep_embedding(t, self.time_emb_dim)
-        time_emb = self.time_in[0](time_emb)
-        time_emb = swish(time_emb)
-        time_emb = self.time_in[1](time_emb)
+#         time_emb = get_timestep_embedding(t, self.time_emb_dim)
+#         time_emb = self.time_in[0](time_emb)
+#         time_emb = swish(time_emb)
+#         time_emb = self.time_in[1](time_emb)
 
-        fra = self.conv_in(event)
-        fra = self.module(fra, x, time_emb)
-        event_out = self.conv_out(fra)
+#         fra = self.conv_in(event)
+#         fra = self.module(fra, x, time_emb)
+#         event_out = self.conv_out(fra)
 
-        return event_out
+#         return event_out
 
 
 
 
 class DecoderModelNoCross(nn.Module):
     def __init__(self, input_dim, num_classes,
-        num_layers, num_f_maps, time_emb_dim, kernel_size, dropout_rate, causal): # input_dim means condition dim
+        num_layers, num_f_maps, time_emb_dim, ant_emb_dim, kernel_size, dropout_rate, causal): # input_dim means condition dim
         
         super(DecoderModelNoCross, self).__init__()
 
         self.time_emb_dim = time_emb_dim
+        self.ant_emb_dim = ant_emb_dim
 
         self.time_in = nn.ModuleList([
             torch.nn.Linear(time_emb_dim, time_emb_dim),
@@ -462,8 +462,8 @@ class DecoderModelNoCross(nn.Module):
         ])
 
         self.ant_in = nn.ModuleList([
-            torch.nn.Linear(time_emb_dim, time_emb_dim),
-            torch.nn.Linear(time_emb_dim, time_emb_dim)
+            torch.nn.Linear(ant_emb_dim, ant_emb_dim),
+            torch.nn.Linear(ant_emb_dim, time_emb_dim)
         ])
 
         self.conv_in = nn.Conv1d(input_dim + num_classes, num_f_maps, 1)
@@ -478,7 +478,7 @@ class DecoderModelNoCross(nn.Module):
         time_emb = swish(time_emb)
         time_emb = self.time_in[1](time_emb)
 
-        ant_emb = get_timestep_embedding(ant_range, self.time_emb_dim)
+        ant_emb = get_timestep_embedding(ant_range, self.ant_emb_dim)
         ant_emb = self.ant_in[0](ant_emb)
         ant_emb = swish(ant_emb)
         ant_emb = self.ant_in[1](ant_emb)
