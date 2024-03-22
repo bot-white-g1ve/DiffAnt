@@ -67,83 +67,82 @@ mode = 'decoder-agg'
 repeat_ids = [0, 1, 2]
 split_ids = [1, 2, 3, 4, 5]
 # split_ids = [1]
-# epochs = [i for i in range(100, 1101, 100)]
-epochs = [400, 500]
+epochs = [i for i in range(100, 1101, 100)]
+# epochs = [400, 500]
 window_size = 2
 
 naming_paris = [
+	# ['RDV-T45AnticipationTry', '-baseline-R1'],
+	# ['RDV-T45AnticipationTry', '-ant_range-1'],
+	# ['RDV-T45AnticipationTry', '-ant_range-2'],
+	# ['RDV-T45AnticipationTry', '-ant_range-3'],
+	# ['RDV-T45AnticipationTry', '-ant_range-4'],
+	# ['RDV-T45AnticipationTry', '-ant_range-5'],
+	# ['RDV-T45AnticipationTry', '-ant_range-6'],
+	# ['RDV-T45AnticipationTry', '-ant_range-7'],
+	# ['RDV-T45AnticipationTry', '-ant_range-8'],
+	# ['RDV-T45AnticipationTry', '-ant_range-9'],
+	# ['RDV-T45AnticipationTry', '-ant_range-10'],
+	# ['RDV-T45AnticipationTry', '-ant_range-12'],
+	# ['RDV-T45AnticipationTry', '-ant_range-14'],
+	# ['RDV-T45AnticipationTry', '-ant_range-16'],
+	# ['RDV-T45AnticipationTry', '-ant_range-18'],
+	# ['RDV-T45AnticipationTry', '-ant_range-20'],
+	# ['RDV-T45AnticipationTry', '-ant_range-25'],
+	# ['RDV-T45AnticipationTry', '-ant_range-30'],
+	# ['RDV-T45AnticipationTry', '-ant_range-40'],
+	# ['RDV-T45AnticipationTry', '-ant_range-50'],
+	# ['RDV-T45AnticipationTry', '-ant_range-75'],
+	# ['RDV-T45AnticipationTry', '-ant_range-100'],
+	# ['RDV-T45AnticipationTry', '-ant_range-200'],
 
-	# ['RDV-T45RealExp1st', '-baseline-R1'],
-	# ['RDV-T45RealExp1st', '-baseline-R2'],
-	# ['RDV-T45RealExp1st', '-baseline-R3'],
-	['RDV-T45RealExp2nd', '-baseline-R1'], # Selected
-	# ['RDV-T45RealExp2nd', '-baseline-R2'],
-	# ['RDV-T45RealExp2nd', '-baseline-R3'],
+	['RDV-T45Adax1EMMAX4000', '-baseline-R1'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-1'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-2'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-3'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-4'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-5'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-6'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-7'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-8'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-9'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-10'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-12'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-14'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-16'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-18'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-20'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-25'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-30'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-40'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-50'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-75'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-100'],
+	['RDV-T45Adax1EMMAX4000', '-ant_range-200'],
 
-	['RDV-T45RealExp1stExtra', '-causal-False'], # Selected
-	# ['RDV-T45RealExp2nd', '-causal-False'],
-
-	# ['RDV-T50RealExp1st', '-baseline-R1'],
-	['RDV-T50RealExp1st', '-baseline-R2'], # Selected
-	# ['RDV-T50RealExp1st', '-baseline-R3'],
-	# ['RDV-T50RealExp2nd', '-baseline-R1'],
-	# ['RDV-T50RealExp2nd', '-baseline-R2'],
-	# ['RDV-T50RealExp2nd', '-baseline-R3'],
-
-	# ['RDV-T50RealExp1st', '-causal-False'],
-	['RDV-T50RealExp2nd', '-causal-False'], # selected
-
-	['RDV-T50RealExp1stExtra', '-class_weighting-ivt'], # selected
-	# ['RDV-T50RealExp2nd', '-class_weighting-ivt'],
-
-	['RDV-T50RealExp1st', '-class_weighting-i_v_t'], # selected
-	# ['RDV-T50RealExp2nd', '-class_weighting-i_v_t'],
-
-	['RDV-T50RealExp1st', '-class_weighting-ivt_i_v_t'], # selected
-	# ['RDV-T50RealExp2nd', '-class_weighting-ivt_i_v_t'],
-
-	['RDV-T50RealExp1st', '-diffusion_cross_att_decoder-True'], # selected 
-	# ['RDV-T50RealExp2nd', '-diffusion_cross_att_decoder-True'],
-
-	['RDV-T50RealExp1st', '-target_components-ivt'], # selected
-	# ['RDV-T50RealExp2nd', '-target_components-ivt'],
-
-	['RDV-T50RealExp1st', '-target_components-ivt_i_v_t_iv_it'], # selected
-	# ['RDV-T50RealExp2nd', '-target_components-ivt_i_v_t_iv_it'],
-
-	['RDV-T50RealExp1stInfer', '-diffusion_guidance_scale-0.0'], # all selected, 400, 500, 'RDV-T50RealExp1st', '-baseline-R2'
-	# ['RDV-T50RealExp1stInfer', '-diffusion_guidance_scale-0.25'],
-	['RDV-T50RealExp1stInfer', '-diffusion_guidance_scale-0.5'],
-	# ['RDV-T50RealExp1stInfer', '-diffusion_guidance_scale-0.75'],
-	['RDV-T50RealExp1stInfer', '-diffusion_guidance_scale-1.0'],
-	# ['RDV-T50RealExp1stInfer', '-diffusion_sampling_timesteps-1'],
-	# ['RDV-T50RealExp1stInfer', '-diffusion_sampling_timesteps-2'],
-	# ['RDV-T50RealExp1stInfer', '-diffusion_sampling_timesteps-4'],
-	# ['RDV-T50RealExp1stInfer', '-diffusion_sampling_timesteps-8'],
-	# ['RDV-T50RealExp1stInfer', '-diffusion_sampling_timesteps-16'],
-	# ['RDV-T50RealExp1stInfer', '-diffusion_sampling_timesteps-32'],
-	# ['RDV-T50RealExp1stInfer', '-diffusion_sampling_timesteps-64'],
-	# ['RDV-T50RealExp1stInfer', '-diffusion_sampling_timesteps-128'],
-
-	# ['Swin-T45InitTry', '-feature_prefix-feature-SelfDistillSwin'],
-	['Swin-T45RealExp2nd', '-baseline-R1'], # selected
-	# ['Swin-T45RealExp2nd', '-baseline-R2'],
-	# ['Swin-T45RealExp2nd', '-baseline-R3'],
-	['Swin-T45RealExp2nd', '-causal-False'],
-
-	# ['Swin-T50RealExp2nd', '-baseline-R1'],
-	['Swin-T50RealExp2nd', '-baseline-R2'],
-	# ['Swin-T50RealExp2nd', '-baseline-R3'],
-	['Swin-T50RealExp2nd', '-causal-False'],
-
-
-	# ['RDV-ChallengeInitTry', '-causal-False'],
-	# ['RDV-ChallengeInitTry', '-weight_decay-1e-06'],
-	# ['RDV-ChallengeInitTry', '-weight_decay-1e-05'],
-	# ['RDV-ChallengeInitTry', '-weight_decay-2e-05'],
-	# ['RDV-ChallengeInitTry', '-weight_decay-5e-05'],
-	# ['RDV-ChallengeInitTry', '-weight_decay-0.0001'],
-
+	# ['Swin-T45AnticipationTry', '-baseline-R1'],
+	# ['Swin-T45AnticipationTry', '-ant_range-1'],
+	# ['Swin-T45AnticipationTry', '-ant_range-2'],
+	# ['Swin-T45AnticipationTry', '-ant_range-3'],
+	# ['Swin-T45AnticipationTry', '-ant_range-4'],
+	# ['Swin-T45AnticipationTry', '-ant_range-5'],
+	# ['Swin-T45AnticipationTry', '-ant_range-6'],
+	# ['Swin-T45AnticipationTry', '-ant_range-7'],
+	# ['Swin-T45AnticipationTry', '-ant_range-8'],
+	# ['Swin-T45AnticipationTry', '-ant_range-9'],
+	# ['Swin-T45AnticipationTry', '-ant_range-10'],
+	# ['Swin-T45AnticipationTry', '-ant_range-12'],
+	# ['Swin-T45AnticipationTry', '-ant_range-14'],
+	# ['Swin-T45AnticipationTry', '-ant_range-16'],
+	# ['Swin-T45AnticipationTry', '-ant_range-18'],
+	# ['Swin-T45AnticipationTry', '-ant_range-20'],
+	# ['Swin-T45AnticipationTry', '-ant_range-25'],
+	# ['Swin-T45AnticipationTry', '-ant_range-30'],
+	# ['Swin-T45AnticipationTry', '-ant_range-40'],
+	# ['Swin-T45AnticipationTry', '-ant_range-50'],
+	# ['Swin-T45AnticipationTry', '-ant_range-75'],
+	# ['Swin-T45AnticipationTry', '-ant_range-100'],
+	# ['Swin-T45AnticipationTry', '-ant_range-200'],
 ]
 
 all_results_aps = {}
@@ -159,7 +158,9 @@ for prefix, suffix in naming_paris:
 	AP_IV_mean, AP_IV_std = get_result(result_dir, prefix, suffix, mode, 'test', repeat_ids, split_ids, selected_epochs, result_key='AP_IV')
 	AP_IT_mean, AP_IT_std = get_result(result_dir, prefix, suffix, mode, 'test', repeat_ids, split_ids, selected_epochs, result_key='AP_IT')
 	AP_IVT_mean, AP_IVT_std = get_result(result_dir, prefix, suffix, mode, 'test', repeat_ids, split_ids, selected_epochs, result_key='AP_IVT')
-	result_line1 = f'{AP_I_mean:.1f}±{AP_I_std:.1f} & {AP_V_mean:.1f}±{AP_V_std:.1f} & {AP_T_mean:.1f}±{AP_T_std:.1f} & {AP_IV_mean:.1f}±{AP_IV_std:.1f} & {AP_IT_mean:.1f}±{AP_IT_std:.1f} & {AP_IVT_mean:.1f}±{AP_IVT_std:.1f}'
+	
+	result_line1 = str(AP_IVT_mean)
+	# result_line1 = f'{AP_I_mean:.1f}±{AP_I_std:.1f} & {AP_V_mean:.1f}±{AP_V_std:.1f} & {AP_T_mean:.1f}±{AP_T_std:.1f} & {AP_IV_mean:.1f}±{AP_IV_std:.1f} & {AP_IT_mean:.1f}±{AP_IT_std:.1f} & {AP_IVT_mean:.1f}±{AP_IVT_std:.1f}'
 	all_results_aps[''.join([prefix, suffix])] = result_line1
 
 	Top1_mean, Top1_std = get_result(result_dir, prefix, suffix, mode, 'test', repeat_ids, split_ids, selected_epochs, result_key='Top-1')
@@ -167,7 +168,8 @@ for prefix, suffix in naming_paris:
 	Top10_mean, Top10_std = get_result(result_dir, prefix, suffix, mode, 'test', repeat_ids, split_ids, selected_epochs, result_key='Top-10')
 	Top20_mean, Top20_std = get_result(result_dir, prefix, suffix, mode, 'test', repeat_ids, split_ids, selected_epochs, result_key='Top-20')
 
-	result_line2 = f'{Top1_mean:.1f}±{Top1_std:.1f} & {Top5_mean:.1f}±{Top5_std:.1f} & {Top10_mean:.1f}±{Top10_std:.1f} & {Top20_mean:.1f}±{Top20_std:.1f}'
+	result_line2 = ''
+	# result_line2 = f'{Top1_mean:.1f}±{Top1_std:.1f} & {Top5_mean:.1f}±{Top5_std:.1f} & {Top10_mean:.1f}±{Top10_std:.1f} & {Top20_mean:.1f}±{Top20_std:.1f}'
 	all_results_topns[''.join([prefix, suffix])] = result_line2
 
 

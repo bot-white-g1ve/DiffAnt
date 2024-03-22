@@ -89,7 +89,7 @@ default_params = {
       ]
    },
    "decoder_params":{
-      "num_layers":2,  
+      "num_layers":4,  
       "num_f_maps":256, 
       "time_emb_dim":512,
       "ant_emb_dim":512,
@@ -123,7 +123,7 @@ default_params = {
    "batch_size":1,
    "learning_rate":0.00005,
    "weight_decay":1e-5,
-   "num_epochs":1601,
+   "num_epochs":1201,
    "log_freq":100,
    "class_weighting":[],
    "set_sampling_seed":True,
@@ -150,10 +150,8 @@ default_params_T45['weight_decay'] = 5e-5
 
 ################
 
-# default_params_T45['encoder_params']['num_f_maps'] = 128
-# default_params_T50['encoder_params']['num_f_maps'] = 128
-# default_params_T45['decoder_params']['num_f_maps'] = 512
-# default_params_T50['decoder_params']['num_f_maps'] = 512
+# default_params_T45['encoder_params']['ant_emb_dim'] = 1024
+# default_params_T50['encoder_params']['ant_emb_dim'] = 1024
 
 ################
 
@@ -207,7 +205,7 @@ def generate_cv_config(params_template, default_feature_prefix, options, naming_
                     params['feature_subdir'] = f'{default_feature_prefix}-k{split_id}'
                     params['encoder_params']['input_dim'] = feature_dim_dict[default_feature_prefix]
 
-                    params['num_epochs'] = 1601
+                    params['num_epochs'] = 1201
                     params['log_train_results'] = False # to be turned on later
                     
                     ################
@@ -302,7 +300,7 @@ generate_cv_config(
   params_template=default_params_T45, 
   default_feature_prefix='feature-RDV-4x4',
   options=options, 
-  naming_prefix='RDV-T45Adax1Dec512', 
+  naming_prefix='RDV-T45Adax1EMMAX4000', 
   repeat_num=3, 
   split_num=5, 
   pretrain_prefix=None, 
