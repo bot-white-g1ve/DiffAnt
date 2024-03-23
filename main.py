@@ -24,7 +24,6 @@ class Trainer:
         num_targets, sample_rate, temporal_aug, set_sampling_seed, guidance_matrices, ant_range, device):
 
         assert(sample_rate == 1)
-        assert(ant_range > 0)
 
         self.device = device
         self.num_targets = num_targets
@@ -224,8 +223,9 @@ class Trainer:
 
             feature, label, video = test_dataset[video_idx]
 
-            feature = [i[:,:,:-self.ant_range] for i in feature]
-            label = label[:,:,self.ant_range:]
+            if self.ant_range > 0:
+                feature = [i[:,:,:-self.ant_range] for i in feature]
+                label = label[:,:,self.ant_range:]
 
             ant = torch.randint(0, 99, (1,), device=self.device).long()
             ant[0] = self.ant_range # ugly: TO DO
