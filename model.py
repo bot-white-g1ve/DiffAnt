@@ -391,6 +391,10 @@ class EncoderModel(nn.Module):
         ant_emb = swish(ant_emb)
         ant_emb = self.ant_in[1](ant_emb)
 
+        ####### temp for ablation
+        ant_emb = torch.zeros_like(ant_emb)
+        ####### temp for ablation
+
         if get_features:
             assert(self.feature_layer_indices is not None and len(self.feature_layer_indices) > 0)
             features = []
@@ -482,6 +486,10 @@ class DecoderModelNoCross(nn.Module):
         ant_emb = self.ant_in[0](ant_emb)
         ant_emb = swish(ant_emb)
         ant_emb = self.ant_in[1](ant_emb)
+
+        ####### temp for ablation
+        ant_emb = torch.zeros_like(ant_emb)
+        ####### temp for ablation
 
         x = self.conv_in(torch.cat((x, event), 1))
         x = self.module(x, time_emb=time_emb+ant_emb)

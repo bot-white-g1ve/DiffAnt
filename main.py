@@ -87,7 +87,12 @@ class Trainer:
 
                 # ant_rid = random.randint(0, self.ant_range * 2) # a<=x<=b
                 # ant_rid = random.randint(0, 10) # a<=x<=b
-                ant_rid = random.randint(0, self.ant_range) # a<=x<=b
+
+                # No Easy-to-hard
+                ant_rid = self.ant_range
+
+                # # Easy-to-hard
+                # ant_rid = random.randint(0, self.ant_range) # a<=x<=b
 
                 if ant_rid > 0:
                     feature = feature[:,:,:-ant_rid]

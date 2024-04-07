@@ -21,7 +21,7 @@ import os
 import pdb
 import numpy as np
 
-prefix = 'RDV-T45Adax1EMMAX4000'
+prefix = 'RealAntNoNoN'
 
 program_file = ['main.py', 'test.py'][0]
 
@@ -45,7 +45,7 @@ for g_id, group in enumerate(configs_groups):
          
         '#PBS -q gpuvolta',
         '#PBS -P zg12',
-        '#PBS -l walltime=5:00:00',
+        '#PBS -l walltime=6:00:00',
         '#PBS -l mem=50GB',
         '#PBS -l ncpus=12',
         '#PBS -l ngpus=1',

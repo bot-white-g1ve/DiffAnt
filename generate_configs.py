@@ -123,7 +123,7 @@ default_params = {
    "batch_size":1,
    "learning_rate":0.00005,
    "weight_decay":1e-5,
-   "num_epochs":1201,
+   "num_epochs":1401,
    "log_freq":100,
    "class_weighting":[],
    "set_sampling_seed":True,
@@ -205,7 +205,7 @@ def generate_cv_config(params_template, default_feature_prefix, options, naming_
                     params['feature_subdir'] = f'{default_feature_prefix}-k{split_id}'
                     params['encoder_params']['input_dim'] = feature_dim_dict[default_feature_prefix]
 
-                    params['num_epochs'] = 1201
+                    params['num_epochs'] = 1401
                     params['log_train_results'] = False # to be turned on later
                     
                     ################
@@ -274,33 +274,33 @@ def generate_cv_config(params_template, default_feature_prefix, options, naming_
 
 ################# CV Settings ####################
 
-# options = {
-#     "baseline": ['R1'],
-#     "ant_range": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25, 30, 40, 50, 75, 100, 200]
-# }
+options = {
+    # "baseline": ['R1'],
+    "ant_range": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25]
+}
 
-# generate_cv_config(
-#   params_template=default_params_T50, 
-#   default_feature_prefix='feature-RDV-2500', 
-#   options=options, 
-#   naming_prefix='RDV-T50AnticipationTry', 
-#   repeat_num=3, 
-#   split_num=5, 
-#   pretrain_prefix=None, 
-#   pretrain_suffix=None, 
-#   pretrain_epochs=None
-# )
+generate_cv_config(
+  params_template=default_params_T50, 
+  default_feature_prefix='feature-RDV-2500', 
+  options=options, 
+  naming_prefix='RDV-T50RealAntNoNoNoN', 
+  repeat_num=3, 
+  split_num=5, 
+  pretrain_prefix=None, 
+  pretrain_suffix=None, 
+  pretrain_epochs=None
+)
 
 options = {
     # "baseline": ['R1'],
-    "ant_range": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25, 30, 40, 50, 75, 100, 200]
+    "ant_range": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25]
 }
 
 generate_cv_config(
   params_template=default_params_T45, 
   default_feature_prefix='feature-RDV-4x4',
   options=options, 
-  naming_prefix='RDV-T45Adax1EMMAX4000', 
+  naming_prefix='RDV-T45RealAntNoNoNoN', 
   repeat_num=3, 
   split_num=5, 
   pretrain_prefix=None, 
@@ -309,37 +309,37 @@ generate_cv_config(
 )
 
 
-# options = {
-#     "baseline": ['R1'],
-#     "ant_range": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25, 30, 40, 50, 75, 100, 200]
-# }
+options = {
+    # "baseline": ['R1'],
+    "ant_range": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25]
+}
 
-# generate_cv_config(
-#   params_template=default_params_T50, 
-#   default_feature_prefix='feature-SelfDistillSwin', # feature not ready yet!
-#   options=options, 
-#   naming_prefix='Swin-T50AnticipationTry', 
-#   repeat_num=3, 
-#   split_num=5, 
-#   pretrain_prefix=None, 
-#   pretrain_suffix=None, 
-#   pretrain_epochs=None
-# )
+generate_cv_config(
+  params_template=default_params_T50, 
+  default_feature_prefix='feature-SelfDistillSwin', # feature not ready yet!
+  options=options, 
+  naming_prefix='Swin-T50RealAntNoNoN', 
+  repeat_num=3, 
+  split_num=5, 
+  pretrain_prefix=None, 
+  pretrain_suffix=None, 
+  pretrain_epochs=None
+)
 
-# options = {
-#     "baseline": ['R1'],
-#     "ant_range": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25, 30, 40, 50, 75, 100, 200]
-# }
+options = {
+    # "baseline": ['R1'],
+    "ant_range": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25]
+}
 
-# generate_cv_config(
-#   params_template=default_params_T45, 
-#   default_feature_prefix='feature-SelfDistillSwin',
-#   options=options, 
-#   naming_prefix='Swin-T45AnticipationTry', 
-#   repeat_num=3, 
-#   split_num=5, 
-#   pretrain_prefix=None, 
-#   pretrain_suffix=None, 
-#   pretrain_epochs=None
-# )
+generate_cv_config(
+  params_template=default_params_T45, 
+  default_feature_prefix='feature-SelfDistillSwin',
+  options=options, 
+  naming_prefix='Swin-T45RealAntNoNoN', 
+  repeat_num=3, 
+  split_num=5, 
+  pretrain_prefix=None, 
+  pretrain_suffix=None, 
+  pretrain_epochs=None
+)
 
