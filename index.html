@@ -250,17 +250,18 @@
             const index = Math.floor(slider.value); 
             image1.src = data.images1[index];
             image2.src = data.images2[index];
-            description1.textContent = triplets[index] || "No description available";
-            description2.textContent = predictions[index] || "No prediction available";
+            description1.textContent = `current triplet: ${triplets[index]}` || "No description available";
+            description2.textContent = `predicted triplet: ${predictions[index]}` || "No prediction available";
         });
 
         // Reset the slider and initial images/descriptions
         slider.value = 0;
         image1.src = data.images1[0];
         image2.src = data.images2[0];
-        description1.textContent = triplets[0] || "No description available";
-        description2.textContent = predictions[0] || "No prediction available";
-    }
+        description1.textContent = `current triplet: ${triplets[0]}` || "No description available";
+        description2.textContent = `predicted triplet: ${predictions[0]}` || "No prediction available";
+      }
+
 
       const videoData = {
           VID01: {
