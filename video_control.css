@@ -1,0 +1,30 @@
+.image-container {
+    display: flex;
+    justify-content: space-between;
+}
+.image-item {
+    width: 48%;
+    text-align: center;
+}
+.image-item img {
+    width: 100%;
+}
+.description {
+    margin-top: 1rem;
+}
+.slider-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+#slider {
+    width: 80%;
+}
+.video-selector {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem; /* 放大字体 */
+}
+#videoSelect {
+    font-size: 1.2rem; /* 放大下拉框内容 */
+    padding: 0.5rem; /* 增加下拉框内边距 */
+}

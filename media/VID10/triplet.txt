@@ -1,0 +1,1750 @@
+hook null_verb null_target
+hook null_verb null_target
+hook null_verb null_target
+hook null_verb null_target
+grasper grasp omentum; hook null_verb null_target
+grasper grasp omentum; grasper retract gallbladder; hook null_verb null_target
+grasper grasp omentum; grasper retract gallbladder; hook null_verb null_target
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook coagulate gallbladder
+grasper grasp omentum; grasper retract gallbladder; hook coagulate gallbladder
+grasper grasp omentum; grasper retract gallbladder; hook coagulate gallbladder
+grasper grasp omentum; grasper retract gallbladder; hook coagulate gallbladder
+grasper grasp omentum; grasper retract gallbladder; hook coagulate gallbladder
+grasper grasp omentum; grasper retract gallbladder; hook coagulate gallbladder
+grasper grasp omentum; grasper retract gallbladder
+grasper grasp omentum; grasper retract gallbladder
+grasper grasp omentum; grasper retract gallbladder
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; grasper retract gallbladder; hook dissect omentum
+grasper grasp omentum; hook dissect omentum
+grasper grasp omentum; hook dissect omentum
+grasper grasp omentum; hook dissect omentum
+grasper retract omentum; hook dissect omentum
+grasper retract omentum; hook dissect omentum
+grasper retract omentum; hook dissect omentum
+grasper retract omentum; hook dissect omentum
+grasper retract omentum; hook dissect omentum
+grasper retract omentum; hook dissect omentum
+grasper retract omentum; hook dissect omentum
+grasper retract omentum; hook dissect omentum
+grasper retract omentum; hook dissect omentum
+grasper retract omentum; hook dissect omentum
+grasper retract omentum; hook dissect omentum
+grasper retract omentum; hook dissect omentum
+grasper retract omentum; hook dissect omentum
+grasper retract omentum; hook dissect omentum
+grasper retract omentum; hook dissect omentum
+hook dissect omentum
+grasper grasp omentum; hook dissect omentum
+grasper grasp omentum; hook dissect omentum
+grasper grasp omentum; hook dissect omentum
+grasper grasp omentum; hook dissect omentum
+hook dissect omentum
+
+hook dissect omentum
+hook dissect omentum
+hook dissect omentum
+hook dissect omentum
+hook dissect omentum
+hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; grasper grasp omentum; hook dissect omentum
+grasper grasp gallbladder; grasper grasp omentum; hook dissect omentum
+grasper grasp gallbladder; grasper grasp omentum; hook dissect omentum
+grasper grasp gallbladder; grasper grasp omentum; hook dissect omentum
+grasper grasp gallbladder; grasper grasp omentum; hook dissect omentum
+grasper grasp gallbladder; grasper grasp omentum; hook dissect omentum
+grasper grasp gallbladder; grasper grasp omentum; hook dissect omentum
+grasper grasp gallbladder; grasper grasp omentum; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder; grasper retract omentum; hook dissect omentum
+grasper grasp gallbladder
+grasper grasp gallbladder
+grasper null_verb null_target
+grasper grasp gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+grasper grasp gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+grasper grasp gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+grasper grasp gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+grasper grasp gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+grasper grasp gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+grasper grasp gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+grasper grasp gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+grasper grasp gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+grasper grasp gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+grasper grasp gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract omentum; hook dissect cystic_duct
+grasper grasp cystic_duct; grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp cystic_duct; grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp cystic_duct; grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp cystic_duct; grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp cystic_duct; grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp cystic_duct; grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp cystic_duct; grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp cystic_duct; grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp cystic_duct; grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp cystic_duct; grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper grasp omentum; hook dissect cystic_duct
+grasper grasp gallbladder; grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_duct
+grasper retract gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+grasper retract gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+grasper retract gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+grasper retract gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+grasper retract gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+grasper retract gallbladder; hook dissect cystic_duct; grasper null_verb null_target
+hook dissect cystic_duct; grasper null_verb null_target
+hook dissect cystic_duct; grasper null_verb null_target
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp omentum; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp cystic_duct; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp cystic_duct; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp cystic_duct; grasper retract gallbladder; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp cystic_duct; hook dissect cystic_duct
+grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; hook dissect cystic_duct
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect cystic_artery
+grasper grasp gallbladder; grasper retract gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp cystic_artery; grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder
+grasper retract gallbladder
+grasper retract gallbladder
+grasper retract gallbladder
+grasper retract gallbladder
+grasper retract gallbladder
+grasper retract gallbladder
+grasper retract gallbladder
+grasper retract gallbladder; irrigator null_verb null_target
+grasper retract gallbladder; irrigator null_verb null_target
+grasper retract gallbladder; irrigator aspirate fluid
+grasper retract gallbladder; irrigator aspirate fluid
+grasper retract gallbladder; irrigator aspirate fluid
+grasper retract gallbladder; irrigator aspirate fluid
+grasper retract gallbladder; irrigator null_verb null_target
+grasper retract gallbladder; irrigator null_verb null_target
+grasper retract gallbladder; irrigator null_verb null_target
+grasper retract gallbladder; irrigator aspirate fluid
+grasper retract gallbladder; irrigator aspirate fluid
+grasper retract gallbladder
+grasper retract gallbladder
+grasper retract gallbladder
+grasper retract gallbladder
+
+
+
+
+
+grasper retract omentum
+grasper retract omentum
+grasper retract omentum
+grasper retract omentum
+grasper retract omentum
+grasper retract omentum
+grasper retract omentum
+grasper retract omentum
+grasper retract omentum
+grasper retract omentum
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper retract omentum; hook dissect gallbladder
+grasper grasp cystic_duct; hook dissect gallbladder
+grasper grasp cystic_duct; hook dissect gallbladder
+grasper grasp cystic_duct; hook dissect gallbladder
+grasper grasp cystic_duct; hook dissect gallbladder
+grasper grasp cystic_duct; hook dissect gallbladder
+grasper grasp cystic_duct; hook dissect gallbladder
+grasper grasp cystic_duct; hook dissect gallbladder
+grasper grasp cystic_duct; hook dissect gallbladder
+grasper grasp cystic_duct; hook dissect gallbladder
+grasper grasp cystic_duct; hook dissect gallbladder
+grasper grasp cystic_duct; hook dissect gallbladder
+grasper grasp cystic_duct; hook dissect gallbladder
+grasper grasp cystic_duct; hook dissect gallbladder
+grasper grasp cystic_duct; hook dissect gallbladder
+grasper grasp cystic_duct; hook dissect gallbladder
+hook dissect gallbladder
+hook dissect gallbladder
+hook dissect gallbladder
+hook dissect gallbladder
+hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+hook dissect gallbladder
+hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+hook dissect gallbladder
+hook dissect gallbladder
+hook dissect gallbladder
+hook dissect gallbladder
+hook dissect gallbladder
+hook dissect gallbladder
+hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+hook dissect gallbladder
+hook dissect gallbladder
+hook dissect gallbladder
+hook dissect gallbladder
+hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+grasper retract gallbladder; hook dissect gallbladder
+hook dissect gallbladder
+grasper grasp gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder
+grasper grasp gallbladder; grasper retract gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract gallbladder; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract gallbladder; grasper retract liver
+grasper retract gallbladder; grasper retract liver
+grasper retract gallbladder; grasper retract liver; clipper clip blood_vessel
+grasper retract gallbladder; grasper retract liver; clipper clip blood_vessel
+grasper retract gallbladder; grasper retract liver; clipper clip blood_vessel
+grasper retract gallbladder; grasper retract liver; clipper clip blood_vessel
+grasper retract liver; clipper clip blood_vessel
+grasper retract liver; clipper clip blood_vessel
+grasper retract liver; clipper clip blood_vessel
+grasper retract liver; clipper clip blood_vessel
+grasper retract liver; clipper clip blood_vessel
+grasper retract gallbladder; grasper retract liver; clipper clip blood_vessel
+grasper retract gallbladder; grasper retract liver; clipper clip blood_vessel
+grasper retract gallbladder; grasper retract liver; clipper clip blood_vessel
+grasper retract liver; clipper clip blood_vessel
+grasper retract gallbladder; grasper retract liver; clipper clip blood_vessel
+grasper retract gallbladder; grasper retract liver; clipper clip blood_vessel
+grasper retract gallbladder; grasper retract liver
+grasper retract gallbladder; grasper retract liver
+grasper retract gallbladder; grasper retract liver
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_artery
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_artery
+grasper retract liver; clipper clip cystic_artery
+grasper retract liver; clipper clip cystic_artery
+grasper retract liver; clipper clip cystic_artery
+grasper retract liver; clipper clip cystic_artery
+grasper retract liver; clipper clip cystic_artery
+grasper retract liver; clipper clip cystic_artery
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_artery
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_artery
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract liver; clipper clip cystic_duct
+grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver; clipper clip cystic_duct
+grasper retract gallbladder; grasper retract liver
+grasper retract gallbladder; grasper retract liver
+grasper retract gallbladder; grasper retract liver
+grasper retract gallbladder; grasper retract liver
+grasper retract gallbladder; grasper retract liver
+grasper retract gallbladder; grasper retract liver
+grasper retract gallbladder; grasper retract liver
+grasper retract gallbladder; grasper retract liver
+grasper retract gallbladder; grasper retract liver; scissors cut cystic_artery
+grasper retract gallbladder; grasper retract liver; scissors cut cystic_artery
+grasper retract gallbladder; grasper retract liver; scissors cut cystic_artery
+grasper retract gallbladder; grasper retract liver; scissors cut cystic_artery
+grasper retract gallbladder; grasper retract liver; scissors cut cystic_artery
+grasper retract gallbladder; grasper retract liver; scissors cut cystic_artery
+grasper retract gallbladder; grasper retract liver; scissors cut cystic_artery
+grasper retract gallbladder; grasper retract liver; scissors cut cystic_artery
+grasper retract gallbladder; grasper retract liver; scissors cut cystic_artery
+grasper retract gallbladder; grasper retract liver; scissors cut cystic_duct
+grasper retract gallbladder; grasper retract liver; scissors cut cystic_duct
+grasper retract gallbladder; grasper retract liver; scissors cut cystic_duct
+grasper retract gallbladder; grasper retract liver; scissors cut cystic_duct
+grasper retract gallbladder; grasper retract liver
+grasper retract gallbladder; grasper retract liver
+grasper retract liver
+grasper retract gallbladder; grasper retract liver
+grasper retract gallbladder; grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract gallbladder; grasper retract liver; irrigator aspirate fluid
+grasper retract gallbladder; grasper retract liver; irrigator aspirate fluid
+grasper retract gallbladder; grasper retract liver
+grasper retract liver; irrigator aspirate fluid
+grasper retract liver; irrigator aspirate fluid
+grasper retract liver; irrigator aspirate fluid
+grasper retract liver; irrigator aspirate fluid
+grasper retract liver; irrigator aspirate fluid
+grasper retract liver; irrigator aspirate fluid
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver; bipolar coagulate blood_vessel
+grasper retract liver; bipolar coagulate blood_vessel
+grasper retract liver; bipolar coagulate blood_vessel
+grasper retract liver; bipolar coagulate blood_vessel
+grasper retract liver; bipolar coagulate blood_vessel
+grasper retract liver; bipolar coagulate blood_vessel
+grasper retract liver; bipolar coagulate blood_vessel
+grasper retract liver; bipolar coagulate blood_vessel
+grasper retract liver; bipolar coagulate blood_vessel
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver; hook dissect gallbladder
+grasper grasp gallbladder; grasper retract liver
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract gallbladder; grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver; hook dissect gallbladder
+grasper retract liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver; hook coagulate liver
+grasper retract liver
+grasper retract liver
+grasper grasp gallbladder; grasper retract liver
+grasper grasp gallbladder; grasper retract liver
+grasper grasp gallbladder; grasper retract liver
+grasper grasp gallbladder; grasper retract liver
+grasper grasp gallbladder; grasper retract liver
+grasper grasp gallbladder
+grasper grasp gallbladder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp gallbladder; grasper grasp specimen_bag; grasper null_verb null_target
+
+grasper grasp specimen_bag
+grasper grasp gallbladder; grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp gallbladder; grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp gallbladder; grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp gallbladder; grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp gallbladder; grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp gallbladder; grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp gallbladder; grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp gallbladder; grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp gallbladder; grasper grasp specimen_bag
+grasper grasp gallbladder; grasper grasp specimen_bag
+grasper grasp gallbladder; grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp gallbladder; grasper grasp specimen_bag
+grasper grasp gallbladder; grasper grasp specimen_bag
+grasper grasp specimen_bag
+
+
+
+
+
+grasper null_verb null_target
+grasper null_verb null_target
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag; grasper pack gallbladder
+grasper grasp specimen_bag; grasper pack gallbladder
+grasper grasp specimen_bag; grasper pack gallbladder
+grasper grasp specimen_bag; grasper pack gallbladder
+grasper grasp specimen_bag; grasper pack gallbladder
+grasper grasp specimen_bag; grasper pack gallbladder
+grasper grasp specimen_bag; grasper pack gallbladder
+grasper grasp specimen_bag; grasper pack gallbladder
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+
+
+grasper grasp peritoneum; grasper retract liver; grasper null_verb null_target
+grasper grasp peritoneum; grasper retract liver
+grasper grasp peritoneum; grasper retract liver
+grasper grasp peritoneum; grasper retract liver
+grasper grasp peritoneum; grasper retract liver
+grasper grasp peritoneum; grasper retract liver
+grasper grasp peritoneum; grasper retract liver
+grasper grasp peritoneum; grasper retract liver
+grasper grasp peritoneum; grasper retract liver
+grasper grasp peritoneum; grasper retract liver
+grasper grasp peritoneum; grasper retract liver
+grasper grasp peritoneum; grasper retract liver
+grasper grasp peritoneum; grasper retract liver
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target; hook null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; irrigator aspirate fluid; grasper null_verb null_target
+grasper retract liver; irrigator aspirate fluid; grasper null_verb null_target
+grasper retract liver; irrigator aspirate fluid; grasper null_verb null_target
+grasper retract liver; irrigator aspirate fluid; grasper null_verb null_target
+grasper retract liver; irrigator aspirate fluid; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; irrigator aspirate fluid; grasper null_verb null_target
+grasper retract liver; irrigator aspirate fluid; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target
+grasper retract liver; grasper null_verb null_target; irrigator null_verb null_target
+grasper retract liver; grasper null_verb null_target; irrigator null_verb null_target
+grasper retract liver; grasper null_verb null_target; irrigator null_verb null_target
+grasper retract liver; grasper null_verb null_target; irrigator null_verb null_target
+grasper retract liver; grasper null_verb null_target; irrigator null_verb null_target
+grasper retract liver; grasper null_verb null_target; irrigator null_verb null_target
+grasper retract liver; grasper null_verb null_target; irrigator null_verb null_target
+grasper retract liver; grasper null_verb null_target; irrigator null_verb null_target
+grasper retract liver; grasper null_verb null_target; irrigator null_verb null_target
+grasper retract liver; grasper null_verb null_target; irrigator null_verb null_target
+grasper retract liver; grasper null_verb null_target; irrigator null_verb null_target
+grasper retract liver; grasper null_verb null_target; irrigator null_verb null_target
+grasper retract liver; grasper null_verb null_target; irrigator null_verb null_target
+grasper null_verb null_target; irrigator null_verb null_target
+grasper null_verb null_target; irrigator null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target; hook null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+grasper grasp specimen_bag; grasper null_verb null_target
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

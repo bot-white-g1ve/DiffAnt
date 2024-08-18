@@ -167,23 +167,23 @@
 
     <div class="col-md-8 col-md-offset-2" style="padding-top: 2rem;">
       <div>
-          <h2>DEMO</h2>
+          <h2>DEMO<br></h2>
           <div class="video-selector">
               <label for="videoSelect">Select a video: </label>
               <select id="videoSelect">
                   <option value="VID01">VID01</option>
-                  <option value="VID05">VID05</option>
+                  <option value="VID10">VID10</option>
                   <option value="VID20">VID20</option>
                   <!-- Add more videos as needed -->
               </select>
           </div>
           <div class="image-container">
               <div class="image-item">
-                  <img id="image1" alt="Frame 1">
+                  <img id="image1" src="frame1.jpg" alt="Frame 1">
                   <p id="description1" class="description">Description for Frame 1</p>
               </div>
               <div class="image-item">
-                  <img id="image2" alt="Frame 2">
+                  <img id="image2" src="frame2.jpg" alt="Frame 2">
                   <p id="description2" class="description">Description for Frame 2</p>
               </div>
           </div>
@@ -213,80 +213,56 @@
           return images;
       }
 
-      async function fetchTextFile(filePath, startLine = 0) {
-          try {
-              const response = await fetch(filePath);
-              if (!response.ok) {
-                  throw new Error(`Failed to load file: ${filePath}`);
-              }
-              const text = await response.text();
-              const lines = text.split('\n');
-              return lines.slice(startLine);  // 从指定行开始读取
-          } catch (error) {
-              console.error(error);
-              return [];  // 如果读取失败，返回一个空数组
-          }
-      }
-
-      async function generateDescriptions(vid) {
-          const triplets = await fetchTextFile(`media/${vid}/triplet.txt`);
-          const predictions = await fetchTextFile(`media/${vid}/triplet.txt`, 4);  // 从第五行开始读取（索引从0开始，因此是4）
-          return { triplets, predictions };
-      }
-
-
-      async function updateContent(video) {
-        console.log(`Loading content for video: ${video}`);
-        const data = videoData[video];
-        
-        // 动态获取描述内容
-        const { triplets, predictions } = await generateDescriptions(video);
-        console.log(`Triplets:`, triplets);
-        console.log(`Predictions:`, predictions);
-
-        slider.max = data.images1.length - 1;
-
-        slider.addEventListener("input", function() {
-            const index = Math.floor(slider.value); 
-            image1.src = data.images1[index];
-            image2.src = data.images2[index];
-            description1.textContent = triplets[index] || "No description available";
-            description2.textContent = predictions[index] || "No prediction available";
-        });
-
-        // Reset the slider and initial images/descriptions
-        slider.value = 0;
-        image1.src = data.images1[0];
-        image2.src = data.images2[0];
-        description1.textContent = triplets[0] || "No description available";
-        description2.textContent = predictions[0] || "No prediction available";
-    }
-
       const videoData = {
           VID01: {
               images1: generateImagePaths('VID01', 0, 100, 1),
-              images2: generateImagePaths('VID01', 5, 105, 1)
-          },
-          VID05: {
-              images1: generateImagePaths('VID05', 0, 100, 1),
-              images2: generateImagePaths('VID05', 5, 105, 1)
+              images2: generateImagePaths('VID01', 5, 105, 1),
+              descriptions1: generateImagePaths('VID01', 0, 100, 1).map((img, index) => `Description for Frame ${index + 1}`),
+              descriptions2: generateImagePaths('VID01', 5, 105, 1).map((img, index) => `Description for Frame ${index + 6}`)
           },
           VID10: {
               images1: generateImagePaths('VID10', 0, 100, 1),
-              images2: generateImagePaths('VID10', 5, 105, 1)
+              images2: generateImagePaths('VID10', 5, 105, 1),
+              descriptions1: generateImagePaths('VID10', 0, 100, 1).map((img, index) => `Description for Frame ${index + 1}`),
+              descriptions2: generateImagePaths('VID10', 5, 105, 1).map((img, index) => `Description for Frame ${index + 6}`)
           },
+          VID20: {
+              images1: generateImagePaths('VID20', 0, 100, 1),
+              images2: generateImagePaths('VID20', 5, 105, 1),
+              descriptions1: generateImagePaths('VID20', 0, 100, 1).map((img, index) => `Description for Frame ${index + 1}`),
+              descriptions2: generateImagePaths('VID20', 5, 105, 1).map((img, index) => `Description for Frame ${index + 6}`)
+          }
+          // Add more videos and corresponding data as needed
       };
-
+  
       const videoSelect = document.getElementById("videoSelect");
       const image1 = document.getElementById("image1");
       const image2 = document.getElementById("image2");
       const description1 = document.getElementById("description1");
       const description2 = document.getElementById("description2");
       const slider = document.getElementById("slider");
-
+  
+      function updateContent(video) {
+          const data = videoData[video];
+          slider.addEventListener("input", function() {
+              const index = Math.floor(slider.value);
+              image1.src = data.images1[index];
+              image2.src = data.images2[index];
+              description1.textContent = data.descriptions1[index];
+              description2.textContent = data.descriptions2[index];
+          });
+  
+          // Reset the slider and initial images/descriptions
+          slider.value = 0;
+          image1.src = data.images1[0];
+          image2.src = data.images2[0];
+          description1.textContent = data.descriptions1[0];
+          description2.textContent = data.descriptions2[0];
+      }
+  
       // Initialize with the first video
       updateContent("VID01");
-
+  
       // Update content when a new video is selected
       videoSelect.addEventListener("change", function() {
           updateContent(this.value);
