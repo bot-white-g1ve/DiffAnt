@@ -79,8 +79,13 @@ def get_data_dict(root_data_dir, dataset_name, feature_subdir, mapping_file,
             
             tensor = torch.tensor(tensor_list)
             event_seq_ivt = tensor.float()
+            # feature = feature.transpose(0, 2, 1)
 
-        assert(feature.shape[1] == event_seq_ivt.shape[0]) # 1,T,F / T,C
+        try:
+            assert(feature.shape[1] == event_seq_ivt.shape[0]) # 1,T,F / T,C
+        except AssertionError:
+            print(f"Assertion failed: feature.shape = {feature.shape}, event_seq_ivt.shape = {event_seq_ivt.shape}")
+            raise
 
         # if ant_range > 0:
         #     feature = feature[:,:-ant_range,:]

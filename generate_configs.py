@@ -274,72 +274,88 @@ def generate_cv_config(params_template, default_feature_prefix, options, naming_
 
 ################# CV Settings ####################
 
+# options = {
+#     # "baseline": ['R1'],
+#     "ant_range": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25]
+# }
+
+# generate_cv_config(
+#   params_template=default_params_T50, 
+#   default_feature_prefix='feature-RDV-2500', 
+#   options=options, 
+#   naming_prefix='RDV-T50RealAntNoNoNoN', 
+#   repeat_num=3, 
+#   split_num=5, 
+#   pretrain_prefix=None, 
+#   pretrain_suffix=None, 
+#   pretrain_epochs=None
+# )
+
+# options = {
+#     # "baseline": ['R1'],
+#     "ant_range": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25]
+# }
+
+# generate_cv_config(
+#   params_template=default_params_T45, 
+#   default_feature_prefix='feature-RDV-4x4',
+#   options=options, 
+#   naming_prefix='RDV-T45RealAntNoNoNoN', 
+#   repeat_num=3, 
+#   split_num=5, 
+#   pretrain_prefix=None, 
+#   pretrain_suffix=None, 
+#   pretrain_epochs=None
+# )
+
+
+# options = {
+#     # "baseline": ['R1'],
+#     "ant_range": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25]
+# }
+
+# generate_cv_config(
+#   params_template=default_params_T50, 
+#   default_feature_prefix='feature-SelfDistillSwin', # feature not ready yet!
+#   options=options, 
+#   naming_prefix='Swin-T50RealAntNoNoN', 
+#   repeat_num=3, 
+#   split_num=5, 
+#   pretrain_prefix=None, 
+#   pretrain_suffix=None, 
+#   pretrain_epochs=None
+# )
+
+# options = {
+#     # "baseline": ['R1'],
+#     "ant_range": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25]
+# }
+
+# generate_cv_config(
+#   params_template=default_params_T45, 
+#   default_feature_prefix='feature-SelfDistillSwin',
+#   options=options, 
+#   naming_prefix='Swin-T45RealAntNoNoN', 
+#   repeat_num=3, 
+#   split_num=5, 
+#   pretrain_prefix=None, 
+#   pretrain_suffix=None, 
+#   pretrain_epochs=None
+# )
+
 options = {
     # "baseline": ['R1'],
-    "ant_range": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25]
-}
-
-generate_cv_config(
-  params_template=default_params_T50, 
-  default_feature_prefix='feature-RDV-2500', 
-  options=options, 
-  naming_prefix='RDV-T50RealAntNoNoNoN', 
-  repeat_num=3, 
-  split_num=5, 
-  pretrain_prefix=None, 
-  pretrain_suffix=None, 
-  pretrain_epochs=None
-)
-
-options = {
-    # "baseline": ['R1'],
-    "ant_range": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25]
+    "ant_range": [5]
 }
 
 generate_cv_config(
   params_template=default_params_T45, 
   default_feature_prefix='feature-RDV-4x4',
   options=options, 
-  naming_prefix='RDV-T45RealAntNoNoNoN', 
+  naming_prefix='RDV-T45RealAntFull', 
   repeat_num=3, 
   split_num=5, 
   pretrain_prefix=None, 
   pretrain_suffix=None, 
   pretrain_epochs=None
 )
-
-
-options = {
-    # "baseline": ['R1'],
-    "ant_range": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25]
-}
-
-generate_cv_config(
-  params_template=default_params_T50, 
-  default_feature_prefix='feature-SelfDistillSwin', # feature not ready yet!
-  options=options, 
-  naming_prefix='Swin-T50RealAntNoNoN', 
-  repeat_num=3, 
-  split_num=5, 
-  pretrain_prefix=None, 
-  pretrain_suffix=None, 
-  pretrain_epochs=None
-)
-
-options = {
-    # "baseline": ['R1'],
-    "ant_range": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25]
-}
-
-generate_cv_config(
-  params_template=default_params_T45, 
-  default_feature_prefix='feature-SelfDistillSwin',
-  options=options, 
-  naming_prefix='Swin-T45RealAntNoNoN', 
-  repeat_num=3, 
-  split_num=5, 
-  pretrain_prefix=None, 
-  pretrain_suffix=None, 
-  pretrain_epochs=None
-)
-

@@ -18,9 +18,6 @@ from utils import load_config_file, set_random_seed
 from utils import get_convert_matrix
 import random
 import pdb
-import sys
-
-model_path = "/hdd/xthu/DiffTriplet_Checkpoint/RDV-T45RealAntFull-S1-0-ant_range-5-epoch-1300.model"
 
 class Trainer:
     def __init__(self, encoder_params, decoder_params, diffusion_params, causal, 
@@ -409,74 +406,7 @@ class Trainer:
         }
         
         return result_dict
-    
-    def run_inference(self, model_path, train_test_dataset, test_test_dataset):
-        device = self.device  
-        
-        self.model.load_state_dict(torch.load(model_path))
 
-        self.model.eval()
-        self.model.to(device)
-
-        def infer_on_dataset(dataset):
-            results = []
-            with torch.no_grad():
-                for i in range(len(dataset)):
-                    feature, label, video = dataset[i]
-                    
-                    if self.ant_range > 0:
-                        feature = [i[:,:,:-self.ant_range] for i in feature]
-                        label = label[:,:,self.ant_range:]
-
-                    ant = torch.randint(0, 99, (1,), device=self.device).long()
-                    ant[0] = self.ant_range # ugly: TO DO
-
-                    # feature:   [torch.Size([1, F, Sampled T])]
-                    # label:     torch.Size([1, C, Original T])
-                    # output: [torch.Size([1, C, Sampled T])]
-                    
-                    label = label.squeeze(0).cpu().numpy()
-
-                    output = [self.model.ddim_sample(feature[i].to(device), self.ant_range, None) 
-                                    for i in range(len(feature))] # output is a list of tuples
-                    output = [i.cpu() for i in output]
-
-                    assert(output[0].shape[0] == 1)
-                    agg_output = np.zeros(label.shape) # C x T
-                    for offset in range(self.sample_rate):
-                        agg_output[:,offset::self.sample_rate] = output[offset].squeeze(0).numpy()
-                    output = agg_output
-                        
-                    assert(output.shape == label.shape) # C x T
-                    assert(output.max() <= 1 and output.min() >= 0)
-
-                    output = (output >= 0.5).astype(int)
-
-                    results.append({
-                        'video': video,
-                        'output': output,
-                        'label': label
-                    })
-            return results
-    
-        # 推理 train_test_dataset
-        print("Running inference on train_test_dataset...")
-        train_results = infer_on_dataset(train_test_dataset)
-
-        # 推理 test_test_dataset
-        if test_test_dataset:
-            print("Running inference on test_test_dataset...")
-            test_results = infer_on_dataset(test_test_dataset)
-        else:
-            test_results = None
-
-        return train_results + test_results
-
-def write_output_to_txt(results):
-    for result in results:
-        with open(f'results/{result["video"]}.txt','w') as f:
-            for frame_idx, frame_output in enumerate(result['output']):
-                f.write(f'{frame_idx},{",".join(frame_output)}')
 
 if __name__ == '__main__':
 
@@ -567,6 +497,9 @@ if __name__ == '__main__':
     if not os.path.exists(result_dir):
         os.makedirs(result_dir)
 
-    results = trainer.run_inference(model_path, train_test_dataset, test_test_dataset)
-
-    write_output_to_txt(results)
+    trainer.train(train_train_dataset, train_test_dataset, test_test_dataset, val_test_dataset,
+                      loss_weights, class_weighting, num_epochs, batch_size, learning_rate, weight_decay,
+                      result_dir=os.path.join(result_dir, naming),
+                      log_freq=log_freq, log_train_results=log_train_results, log_APs=log_APs,
+                      evaluation_protocol=evaluation_protocol
+                      )
