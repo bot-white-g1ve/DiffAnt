@@ -234,34 +234,39 @@
           return { triplets, predictions };
       }
 
-
       async function updateContent(video) {
-        console.log(`Loading content for video: ${video}`);
-        const data = videoData[video];
-        
-        // 动态获取描述内容
-        const { triplets, predictions } = await generateDescriptions(video);
-        console.log(`Triplets:`, triplets);
-        console.log(`Predictions:`, predictions);
+          console.log(`Loading content for video: ${video}`);
+          const data = videoData[video];
+          
+          // 动态获取描述内容
+          const { triplets, predictions } = await generateDescriptions(video);
+          console.log(`Triplets:`, triplets);
+          console.log(`Predictions:`, predictions);
 
-        slider.max = data.images1.length - 1;
+          slider.max = data.images1.length - 1;
 
-        slider.addEventListener("input", function() {
-            const index = Math.floor(slider.value); 
-            image1.src = data.images1[index];
-            image2.src = data.images2[index];
-            description1.textContent = `current triplet: ${triplets[index]}` || "No description available";
-            description2.textContent = `predicted triplet: ${predictions[index]}` || "No prediction available";
-        });
+          // 移除之前的事件处理程序（如果有的话）
+          slider.removeEventListener("input", handleSliderInput);
 
-        // Reset the slider and initial images/descriptions
-        slider.value = 0;
-        image1.src = data.images1[0];
-        image2.src = data.images2[0];
-        description1.textContent = `current triplet: ${triplets[0]}` || "No description available";
-        description2.textContent = `predicted triplet: ${predictions[0]}` || "No prediction available";
+          // 定义新的事件处理程序
+          function handleSliderInput() {
+              const index = Math.floor(slider.value); 
+              image1.src = data.images1[index];
+              image2.src = data.images2[index];
+              description1.textContent = `current triplet: ${triplets[index]}` || "No description available";
+              description2.textContent = `predicted triplet: ${predictions[index]}` || "No prediction available";
+          }
+
+          // 添加新的事件处理程序
+          slider.addEventListener("input", handleSliderInput);
+
+          // Reset the slider and initial images/descriptions
+          slider.value = 0;
+          image1.src = data.images1[0];
+          image2.src = data.images2[0];
+          description1.textContent = `current triplet: ${triplets[0]}` || "No description available";
+          description2.textContent = `predicted triplet: ${predictions[0]}` || "No prediction available";
       }
-
 
       const videoData = {
           VID01: {
